@@ -1,0 +1,99 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+bool LoopFlag=true;
+void prArr(vector<int> arr,int e){
+    for(int i=0;i<e;i++) cout<<arr[i]; cout<<endl;
+}
+int Hamming(string &A,string &B,int L){
+   int H=0;
+    for(int i=0;i<L;i++)
+        if(A[i]!=B[i]) ++H;
+    return H;
+}
+void nextStr(string &s,int L,int A){
+    char c = 'a'+A; s[0]++; int j=0;
+    for(int i=0;i<L;i++){
+        if(s[i]<c) return ;
+        else {s[i]='a';++s[i+1];j=i+1;}
+    }
+
+     return;
+}
+bool AP(string &s,int L){
+    for(int i=0;i<L;i++){
+        for(int j=i+1;j<L;j++){
+           int k = 2*j-i;
+            if(k<L && i!=j && i!=k && j!=k && s[i]==s[j] && s[i]==s[k] && s[j]==s[k]) return false;
+        }
+    } return true;
+}
+
+bool __AP(vector<int> &s,int L,int &idx){
+    bool flag=false;//no such pattern
+     for(int i=0;i<L;i++){
+        for(int j=i+1;j<L;j++){
+           int k = 2*j-i;
+            if(k<L && i!=j && i!=k && j!=k && s[i]==s[j] && s[i]==s[k] && s[j]==s[k]) {idx=k;flag=true;}//pattern found
+        }
+    }
+    return flag;
+}
+int __HM(vector<int> &Sarr,vector<int>&__n,int L){
+    int H=0LL;
+    for(int i=0;i<L;i++)
+        if(Sarr[i]!=__n[i]) ++H;
+    return H;
+}
+void __nextSTr(vector<int>&__n,int L,int A){
+    int carr=1;
+    for(int i=L-1;i>=0;i--){
+        __n[i]+=carr;
+        if(__n[i]==A){__n[i]=0; carr=1;}
+        else {carr=0;return;}
+    }
+    if(carr)LoopFlag=false;
+}
+int main(){
+//std::cout << std::numeric_limits<long long>::max();
+   int T,A,K,L,idx; scanf("%d",&T); long long int N,ans=0LL;
+    while(T--){
+        scanf("%d%d",&A,&K);string s,t; ll ct=0;
+        cin >> s; L=s.length();
+      if(L>12 && A == 3){ //bigger case for A=3
+            if(L>26) ans=0LL;
+            else{
+                LoopFlag = true;//global looper
+                /*
+                vector<int> Sarr(L); for(int i=0;i<L;i++)  Sarr[i]=s[i]-'a'; //prArr(Sarr,1,L);
+                vector<int> __n(L);for(int i=0;i<L;i++) __n[i]=0; ct=0LL;
+                for(;LoopFlag ;__nextSTr(__n,L,A)){ ct++; cout<<ct<<"\t";
+                    bool flag =__AP(__n,L,idx);
+                    if(flag == true){//skip
+                        int i=idx+1;
+                        for(;i<L;i++) {__n[i]=(A-1); }//skipping remaining string aaaxxxx ... => aaaccc...c => aabaaaa..a
+                    }else if( __HM(Sarr,__n,L)<=K ) {ans++;} //else  prArr(__n,L);
+                } __n.clear();
+            }
+            */
+            printf("%lld\n",ans);
+            cout<<ct<<endl;
+       }
+       else{
+            if(L>12 && A == 2){ans=0LL;}
+            else {
+                N=pow(A,L);ans=0LL;//printf("%intd %intd  ",L,N);
+                for(int i=0;i<L;i++) t+='a'; //print(t,L);
+                for(int i=0;i<N;i++){ //print(t,L);
+                    bool flag=AP(t,L);
+                    if(Hamming(s,t,L)<=K &&  flag ) ans++;
+                    nextStr(t,L,A);
+                }
+            }
+
+        printf("%lld\n",ans); s.clear();t.clear();
+    }
+    }
+    return 0;
+}
+

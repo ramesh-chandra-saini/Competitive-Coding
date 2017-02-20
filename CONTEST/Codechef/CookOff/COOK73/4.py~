@@ -1,0 +1,3 @@
+N=raw_input();
+R,K=raw_input().split()
+print N,R,K;
