@@ -1,0 +1,15 @@
+\bibitem{paper-3} Sitaram Asur,Bernardo A. Huberman,Predicting the Future With Social Media
+\bibitem{paper-4} Indumathi S, Shreekant Jere,	A Survey on Stock Prediction with Statistical and Social Media Analytics,Apr-2016
+\bibitem{paper-5} Yoosin Kim, Seung Ryul Jeong, Imran Ghani, Text Opinion Mining to Analyze News for Stock Market Prediction,2014
+\bibitem{paper-6} Kalyani Joshi, Prof. Bharathi H. N., Prof. Jyothi Rao, STOCK TREND PREDICTION USING NEWS SENTIMENT ANALYSIS
+\bibitem{paper-7} Yuzheng Zhai, Arthur Hsu, and Saman K Halgamuge, Combining News and Technical Indicators in Daily Stock Price Trends Prediction
+\bibitem{paper-8} Sheikh Shaugat Abdullah, Mohammad Saiedur Rahaman and Mohammad Saidur Rahman , Analysis of Stock Market using Text Mining and Natural Language Processing
+\bibitem{paper-9} Enric Junqué de Fortuny a, Tom De Smedt b, David Martens a, Walter Daelemans b, Evaluating and understanding text-based stock price prediction models, 2012
+\bibitem{paper-10} Selene Yue Xu, Stock Price Forecasting Using Information from Yahoo Finance and Google Trend
+\bibitem{paper-11} Ruchi Desai, Prof.Snehal Gandhi, Stock Market Prediction Using Data Mining
+\bibitem{paper-12} Tsai, C.-F. and Wang, S.-P.,Stock Price Forecasting by Hybrid Machine Learning Techniques
+\bibitem{paper-13} Shunrong Shen, Haomiao Jiang, Tongda Zhang, Stock Market Forecasting Using Machine Learning Algorithms
+\bibitem{paper-14} Wei Huanga;b,Yoshiteru Nakamoria; Shou-Yang Wangb, Forecasting stock market movement direction with support vector machine
+\bibitem{paper-15} Chi- Yuan Yeh, Chi- Wei Huang, Shie- Jue Lee, A multiple-kernel support vector regression approach for stock market price forecasting, 2010
+
+

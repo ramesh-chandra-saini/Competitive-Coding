@@ -1,0 +1,274 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+\documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out
+                                                          % if you need a4paper
+%\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4
+                                                          % paper
+
+\IEEEoverridecommandlockouts                              % This command is only
+                                                          % needed if you want to
+                                                          % use the \thanks command
+\overrideIEEEmargins
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+
+
+
+% The following packages can be found on http:\\www.ctan.org
+%\usepackage{graphics} % for pdf, bitmapped graphics files
+%\usepackage{epsfig} % for postscript graphics files
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+%\usepackage{times} % assumes new font selection scheme installed
+%\usepackage{amsmath} % assumes amsmath package installed
+%\usepackage{amssymb}  % assumes amsmath package installed
+
+\title{\LARGE \bf
+Simulation On Creation Of Solar System
+}
+
+%\author{ \parbox{3 in}{\centering Huibert Kwakernaak*
+%         \thanks{*Use the $\backslash$thanks command to put information here}\\
+%         Faculty of Electrical Engineering, Mathematics and Computer Science\\
+%         University of Twente\\
+%         7500 AE Enschede, The Netherlands\\
+%         {\tt\small h.kwakernaak@autsubmit.com}}
+%         \hspace*{ 0.5 in}
+%         \parbox{3 in}{ \centering Pradeep Misra**
+%         \thanks{**The footnote marks may be inserted manually}\\
+%        Department of Electrical Engineering \\
+%         Wright State University\\
+%         Dayton, OH 45435, USA\\
+%         {\tt\small pmisra@cs.wright.edu}}
+%}
+
+\author{a$^{1}$ and b$^{2}$% <-this % stops a space
+\thanks{*This work was not supported by any organization}% <-this % stops a space
+\thanks{$^{1}$H. Kwakernaak is with Faculty of Electrical Engineering, Mathematics and Computer Science,
+        University of Twente, 7500 AE Enschede, The Netherlands
+        {\tt\small h.kwakernaak at papercept.net}}%
+\thanks{$^{2}$P. Misra is with the Department of Electrical Engineering, Wright State University,
+        Dayton, OH 45435, USA
+        {\tt\small p.misra at ieee.org}}%
+}
+
+
+\begin{document}
+
+
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+
+The question that how the solar system came into existence or its origin is a long debatable question that the scientist are constantly researching on. The aim of writing the paper is to get a clear view of how the solar system first came into existence and how the planet and other planetary bodies came into existence. There are a lot of simulation online which talks about solar system simulation but none talks about the origin so by doing this project we tried to show a simple simulation of the creation of solar system. So the paper talks about the techniques used to create the simulation in opengl  and how the other origin theories contributed to make the simulation a live one.
+
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{INTRODUCTION}
+In this project we simply show how the solar system is created based on the planetary nebular theory that is backed up by NASA. The origin theories that are basically used to set up the project are discussed to get a general idea of the solar system was created at first. Astronomers preferred thetidalornear-collisionhypothesis put forwardin 1917, in which the planets were considered to have been formed due to the approach of some other star to the Sun. This near-miss would have drawn large amounts of matter out of the Sun and the other star by their mutualtidal forces, which could have then condensed into planets. In 1943, A Soviet astronomerproposed that the Sun, in its present form, passed through a denseinterstellar cloud, emerging enveloped in a cloud of dust and gas, from which the planets eventually formed. This solved the angular momentum problem by assuming that the Sun's slow rotation was peculiar to it, and that the planets did not form at the same time as the Sun. Gerard Kuiper (in 1944) argued, that regular eddies would be impossible and postulated that large gravitational instabilities might occur in the solar nebula, forming condensations. In this the solar nebula could be either co-genetic with the Sun or captured by it. Density distribution would determine what could form: either a planetary system or a stellar companion. The 2 types of planets were assumed to be due to the Roche limit. No explanation was offered for the Sun's slow rotation which Kuiper saw as a larger G-star problem.
+
+In Fred Whipple's 1948 scenario a smoke cloud about 60,000 AU in diameter and with 1 solar mass (M0) contracts and produces the Sun. It has a negligible angular momentum thus accounting for the Sun's similar property. This smoke cloud captures a smaller 1 with a large angular momentum. The collapse time for the large smoke and gas nebula is about 100 million years and the rate is slow at first, increasing in later stages. The planets would condense from small clouds developed in, or captured by, the 2nd cloud, the orbits would be nearly circular because accretion would reduce eccentricity due to the influence of the resisting medium, orbital orientations would be similar because the small cloud was originally small and the motions would be in a common direction. Swiss astronomer Louis Jacot (in 1951, 1962, 1981), like Weisacker and Ter Haar, continued the Cartesian idea of vortices but proposed a hierarchy of vortices or vortices within vortices, i.e., a lunar system vortex, a Solar System vortex, and a galactic vortex. He put forward the notion that planetary orbits were in spirals, not circles or ellipses so recognized that the Solar System is in expansion (planets move away from the Sun). It is a known fact that planetary orbits are not fixed circles but are slowly spiraling outwards, Earth's anomalistic year (a planetary orbit measured from perihelion to perihelion) being 4 min., 44 sec
+The graphical components used to set up the project are simple opengl functions included in glew and glut libraries with a circle drawing algorithm developed by using triangle vertex method. OpenGL was engineered to satisfy graphics needs for the future. This means that most of the conceptions put in it back when it was written weren’t available on graphics hardware to make use of it. As hardware improved, OpenGL didn’t change dramatically to fit the needs of the new technologies. For example, consider T and L architecture, which is currently embedded in most graphics GPUs, wasn’t there 3 years ago. However, OpenGL had the functions and methods to emulate translationand lighting effects even without the hardware. This is called software rendering. OpenGL hides the hardware layer making it easy to program for all kinds of hardware and making sure that the same effect will show on all. This is defined byconformance. Moreover, considering different operating systems, OpenGL would do just fine on any of them (Portability) since it is open source. OpenGl has an architecture review board (ARB) which decides on the open standards. Although many big companies are involved in the ARB, they tend to set standards not to take advantage of them personally. One bad thing is that whoever holds a license to update OpenGL can publish it and then there may be many versions out there; even versions which are made to specific hardware cards. This makes it a bit nonstandard. OpenGL has evolved through the years, since 1992, and now the most current usable version is OpenGL 1.4. OpenGL 1.5 specifications have come out but there are still corrections being made to it and in the near future, OpenGL 2.0 is being developed by 3DLabs. OpenGL 2.0 is thought to be another version that should set the standards for many years to come. As far as it is known, OpenGL 2.0 is a Shading language.
+The textbooks in middle schools only discuss about the origin in a simple manner but for the students to see it in a live simulation is a great learning experience. The main motivation behind writing the paper is to show the origin and formation together in a solar system simulation. The scope of this paper is to inform the students how actually solar system is created and to show them the simulation so that they can be cleared of any doubt that they have. Also the simulation can be used on creation of mobile games as all the function used are simple opengl function which are also supported in android platform.
+
+
+\section{Literature Survey}
+The all other simulation that are on solar system creation either talk about how all the planets and their bodies rotate around sun and around each other but they do not show how actually the solar system is created at the first place. There are certain particle system simulation which uses nvidia cude engine to show the particle movements and how they come together to form the planets and other planetary bodies. They make use of the n-body simulation techniques to render over 100000 particles which cannot be rendered in normal graphics and need higher graphics to work with. In physics and astronomy, an N-body simulation is a simulation of a dynamical system of particles, usually under the influence of physical forces, such as gravity (see n-body problem). N-body simulations are widely used tools in astrophysics, from investigating the dynamics of few-body systems like the Earth-Moon-Sun system to understanding the evolution of the large-scale structure of the universe. In physical cosmology, N-body simulations are used to study processes of non-linear structure formation such as galaxy filaments and galaxy halos from the influence of dark matter. Direct N-body simulations are used to study the dynamical evolution of star clusters. In direct gravitational N-body simulations, the equations of motion of a system of N particles under the influence of their mutual gravitational forces are integrated numerically without any simplifying approximations. These calculations are used in situations where interactions between individual objects, such as stars or planets, are important to the evolution of the system. The first direct N-body simulations were carried out by Sebastian von Hoerner at the Astronomisches Rechen-Institut in Heidelberg, Germany. Sverre Aarseth at the University of Cambridge (UK) has dedicated his entire scientific life to the development of a series of highly efficient N-body codes for astrophysical applications which use adaptive (hierarchical) time steps, an Ahmad-Cohen neighbour scheme and regularization of close encounters. Regularization is a mathematical trick to remove the singularity in the Newtonian law of gravitation for two particles which approach each other arbitrarily close. Sverre Aarseth's codes are used to study the dynamics of star clusters, planetary systems and galactic nuclei. Particle-based techniques are used in many applications - from interactive simulation of fluids and smoke for games to astrophysics simulations and molecular dynamics. Recent research has also applied particle methods to soft body and cloth simulation , and there is some hope that one day these techniques will allow an efficient unification of rigid, soft body and fluid simulations where everything can interact with everything else seamlessly.
+There are two basic types of simulation – Eulerian (grid-based) methods, which calculate the properties of the simulation at a set of fixed points in space, and Lagrangian (particle) methods, which calculate the properties of a set of particles as they move through space.
+
+ The web based solar system creator by exploratorium Edu ltd where you can enter the mass and speed of each of the planet yourself and see the simulation. It makes use of webgl technology to show the simulation. The diameter of the sun is the main parameter around which the solar system is scaled. StarGen is the latest version of a series of programs I've worked on off and on over the last thirty years, though none of my code in the current incarnation is more than half that age. It's a program for creating moderately believable planetary systems around stars other than our own. The most recent version runs on Macintosh and Unix machines and produces HTML files as output. StarGen owes a lot to many different precursors written by several authors over the years. It's oldest roots are a couple of papers published 30 or more years ago by Stephen Dole of the Rand corporation. Additional information came from a 1985 paper by Martyn J. Fogg.
+Based on these papers Dole created a program called ACRETE, which was originally coded in FORTRAN. Carl Sagan and Richard Isaacson refined the model and published a paper of their own in 1977. Inspired by the Dole and Sagan papers, Martyn Fogg created a microcomputer version of Accrete, still in Fortran, and published a paper in 1985. In 1988, Matthew Burdick, who turned the Accrete model as described by Fogg into a program called "starform". I believe that it was he who incorporated the earlier work of Kothari into the code.
+\section{METHODOLOGY}
+The design and techniques used for creating the simulation depends totally on the systems capabilities to run the opengl standard libraries. For reshaping standard opengl reshape function is used. keys are assigned to show the simulation from different angels and to proceed with the simulation. For compilation of the c files glut glew and gl libraries should be linked to the files. After compilation the 3 files can be run simultaneously using the command prompt.
+As there is no concept of time in opengl the planets rotate around the sun with different speed only because of their axis radius as the rotate function cannot be in cooperated with time. The whole program can be converted into a makefile to run as a whole.
+
+The circle drawing algorithm uses triangle vertex method to find the next point in the circle with the radius as parameter.The design can be summarized as follows:-
+
+\begin{itemize}
+\item Giant ball of gas
+\item Expansion due to internal explosion and fission
+\item Particles merged to form ring to give rise to a disc like structure 
+\item Planets and other bodies rotation along the rings due to suns gravitation.
+\end{itemize}
+
+\section{IMPLEMNTATION}
+The existing system use the planetary nebular theory which explains how the solar system is formed in only 3 steps.
+The first step (fig 1) explains how the gas of clouds and dust come together to form a ball of cloud which keep on expanding due to internal explosion. We used a sphere to show the ball of gas with glscalef to expand the sphere. But for better implementation a particle system could have been used to simulate the whole effect. The 2nd step (fig 2) involves creation of a disc like structure after the ball expands. the gaseous particles come together to form disc like structures which ultimately forms the planet axis. The 3rd step (fig 3) shows how all the planets are created and they rotate around the sun with their paths along the axis. We used simple opengl functions to implement the whole simulation. The functions used are as follows:-
+\begin{itemize}
+\item  glEnable($ GL\_BLEND $); - After blending is enabled, as shown above, the incoming primitive color is blended with the color already stored in the framebuffer. glBlendFunc () controls how this blending occurs. The typical use described above modifies the incoming color by its associated alpha value and modifies the destination color by one minus the incoming alpha value. The sum of these two colors is then written back into the framebuffer.
+\item  glEnable ($ GL\_LIGHTING $);- OpenGL approximates light and lighting as if light can be broken into red, green, and blue components. Thus, the color of light sources is characterized by the amount of red, green, and blue light they emit, and the material of surfaces is characterized by the percentage of the incoming red, green, and blue components that is reflected in various directions. The OpenGL lighting equations are just an approximation but one that works fairly well and can be computed relatively quickly.
+\item glEnable ($ GL\_LIGHT0 $);- Like lights, materials have different ambient, diffuse, and specular colors, which determine the ambient, diffuse, and specular reflectances of the material. A material's ambient reflectance is combined with the ambient component of each incoming light source, the diffuse reflectance with the light's diffuse component, and similarly for the specular reflectance and component. Ambient and diffuse reflectance’s define the color of the material and are typically similar if not identical. Specular reflectance is usually white or gray, so that specular highlights end up being the color of the light source's specular intensity. If you think of a white light shining on a shiny red plastic sphere, most of the sphere appears red, but the shiny highlight is white
+\item glPushMatrix($ $); glPopMatrix (); - There is a stack of matrices for each of the matrix modes. In $ GL_MODELVIEWmode $, the stack depth is at least 32. In the other modes,$GL\_COLOR$,$GL\_PROJECTION$, and $GL\_TEXTURE$, the depth is at least 2. The current matrix in any mode is the matrix on the top of the stack for that mode.
+\item glTranslatef($ $)- glTranslate produces a translation by x y z . The current matrix (see glMatrixMode) is multiplied by this translation matrix, with the product replacing the current matrix, as if glMultMatrix were called with the following matrix for its argument:  1 0 0 x 0 1 0 y 0 0 1 z 0 0 0 1If the matrix mode is either $GL\_MODELVIEW$ or $GL\_PROJECTION$, all objects drawn after a call to glTranslate are translated. Use  glPushMatrix and glPopMatrix to save and restore the untranslated coordinate system.
+\item glRotatef($ $)   - glRotateproduces a rotation ofangledegrees around the vector[x][y][z]
+\item  glutSolidSphere -for sphere creation.
+\item  glColor3f -for coloring.
+
+\end{itemize}
+
+\section{Results}
+\section{Limitations}
+We did not use particle system which could have produced a rich viewing and simulating experience. Also the speed and mass of the planets are not strictly taken into consideration. We only used ratios to get the planet size  and speed also depends upon the distance of the planet with the sun.
+\section{Conslusion}
+Though the project can only be used for education purpose but with certain improvements it can be used for many other things. With everyday improvement of graphics new technologies can be implemented to make the simulation better like in cooperating particle system and n body simulation to show the interaction between the particles like collision and fission. Though there are many other projects but this is the only simulation which talks about origin rather than the simulation also. 
+
+
+
+
+
+
+\subsection{Selecting a Template (Heading 2)}
+
+First, confirm that you have the correct template for your paper size. This template has been tailored for output on the US-letter paper size. Please do not use it for A4 paper since the margin requirements for A4 papers may be different from Letter paper size.
+
+\subsection{Maintaining the Integrity of the Specifications}
+
+The template is used to format your paper and style the text. All margins, column widths, line spaces, and text fonts are prescribed; please do not alter them. You may note peculiarities. For example, the head margin in this template measures proportionately more than is customary. This measurement and others are deliberate, using specifications that anticipate your paper as one part of the entire proceedings, and not as an independent document. Please do not revise any of the current designations
+
+\section{MATH}
+
+Before you begin to format your paper, first write and save the content as a separate text file. Keep your text and graphic files separate until after the text has been formatted and styled. Do not use hard tabs, and limit use of hard returns to only one return at the end of a paragraph. Do not add any kind of pagination anywhere in the paper. Do not number text heads-the template will do that for you.
+
+Finally, complete content and organizational editing before formatting. Please take note of the following items when proofreading spelling and grammar:
+
+\subsection{Abbreviations and Acronyms} Define abbreviations and acronyms the first time they are used in the text, even after they have been defined in the abstract. Abbreviations such as IEEE, SI, MKS, CGS, sc, dc, and rms do not have to be defined. Do not use abbreviations in the title or heads unless they are unavoidable.
+
+\subsection{Units}
+
+\begin{itemize}
+
+\item Use either SI (MKS) or CGS as primary units. (SI units are encouraged.) English units may be used as secondary units (in parentheses). An exception would be the use of English units as identifiers in trade, such as Ò3.5-inch disk driveÓ.
+\item Avoid combining SI and CGS units, such as current in amperes and magnetic field in oersteds. This often leads to confusion because equations do not balance dimensionally. If you must use mixed units, clearly state the units for each quantity that you use in an equation.
+\item Do not mix complete spellings and abbreviations of units: ÒWb/m2Ó or Òwebers per square meterÓ, not Òwebers/m2Ó.  Spell out units when they appear in text: Ò. . . a few henriesÓ, not Ò. . . a few HÓ.
+\item Use a zero before decimal points: Ò0.25Ó, not Ò.25Ó. Use Òcm3Ó, not ÒccÓ. (bullet list)
+
+\end{itemize}
+
+
+\subsection{Equations}
+
+The equations are an exception to the prescribed specifications of this template. You will need to determine whether or not your equation should be typed using either the Times New Roman or the Symbol font (please no other font). To create multileveled equations, it may be necessary to treat the equation as a graphic and insert it into the text after your paper is styled. Number equations consecutively. Equation numbers, within parentheses, are to position flush right, as in (1), using a right tab stop. To make your equations more compact, you may use the solidus ( / ), the exp function, or appropriate exponents. Italicize Roman symbols for quantities and variables, but not Greek symbols. Use a long dash rather than a hyphen for a minus sign. Punctuate equations with commas or periods when they are part of a sentence, as in
+
+$$
+\alpha + \beta = \chi \eqno{(1)}
+$$
+
+Note that the equation is centered using a center tab stop. Be sure that the symbols in your equation have been defined before or immediately following the equation. Use Ò(1)Ó, not ÒEq. (1)Ó or Òequation (1)Ó, except at the beginning of a sentence: ÒEquation (1) is . . .Ó
+
+\subsection{Some Common Mistakes}
+\begin{itemize}
+
+
+\item The word ÒdataÓ is plural, not singular.
+\item The subscript for the permeability of vacuum ?0, and other common scientific constants, is zero with subscript formatting, not a lowercase letter ÒoÓ.
+\item In American English, commas, semi-/colons, periods, question and exclamation marks are located within quotation marks only when a complete thought or name is cited, such as a title or full quotation. When quotation marks are used, instead of a bold or italic typeface, to highlight a word or phrase, punctuation should appear outside of the quotation marks. A parenthetical phrase or statement at the end of a sentence is punctuated outside of the closing parenthesis (like this). (A parenthetical sentence is punctuated within the parentheses.)
+\item A graph within a graph is an ÒinsetÓ, not an ÒinsertÓ. The word alternatively is preferred to the word ÒalternatelyÓ (unless you really mean something that alternates).
+\item Do not use the word ÒessentiallyÓ to mean ÒapproximatelyÓ or ÒeffectivelyÓ.
+\item In your paper title, if the words Òthat usesÓ can accurately replace the word ÒusingÓ, capitalize the ÒuÓ; if not, keep using lower-cased.
+\item Be aware of the different meanings of the homophones ÒaffectÓ and ÒeffectÓ, ÒcomplementÓ and ÒcomplimentÓ, ÒdiscreetÓ and ÒdiscreteÓ, ÒprincipalÓ and ÒprincipleÓ.
+\item Do not confuse ÒimplyÓ and ÒinferÓ.
+\item The prefix ÒnonÓ is not a word; it should be joined to the word it modifies, usually without a hyphen.
+\item There is no period after the ÒetÓ in the Latin abbreviation Òet al.Ó.
+\item The abbreviation Òi.e.Ó means Òthat isÓ, and the abbreviation Òe.g.Ó means Òfor exampleÓ.
+
+\end{itemize}
+
+
+\section{USING THE TEMPLATE}
+
+Use this sample document as your LaTeX source file to create your document. Save this file as {\bf root.tex}. You have to make sure to use the cls file that came with this distribution. If you use a different style file, you cannot expect to get required margins. Note also that when you are creating your out PDF file, the source file is only part of the equation. {\it Your \TeX\ $\rightarrow$ PDF filter determines the output file size. Even if you make all the specifications to output a letter file in the source - if you filter is set to produce A4, you will only get A4 output. }
+
+It is impossible to account for all possible situation, one would encounter using \TeX. If you are using multiple \TeX\ files you must make sure that the ``MAIN`` source file is called root.tex - this is particularly important if your conference is using PaperPlaza's built in \TeX\ to PDF conversion tool.
+
+\subsection{Headings, etc}
+
+Text heads organize the topics on a relational, hierarchical basis. For example, the paper title is the primary text head because all subsequent material relates and elaborates on this one topic. If there are two or more sub-topics, the next level head (uppercase Roman numerals) should be used and, conversely, if there are not at least two sub-topics, then no subheads should be introduced. Styles named ÒHeading 1Ó, ÒHeading 2Ó, ÒHeading 3Ó, and ÒHeading 4Ó are prescribed.
+
+\subsection{Figures and Tables}
+
+Positioning Figures and Tables: Place figures and tables at the top and bottom of columns. Avoid placing them in the middle of columns. Large figures and tables may span across both columns. Figure captions should be below the figures; table heads should appear above the tables. Insert figures and tables after they are cited in the text. Use the abbreviation ÒFig. 1Ó, even at the beginning of a sentence.
+
+\begin{table}[h]
+\caption{An Example of a Table}
+\label{table_example}
+\begin{center}
+\begin{tabular}{|c||c|}
+\hline
+One & Two\\
+\hline
+Three & Four\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+   \begin{figure}[thpb]
+      \centering
+      \framebox{\parbox{3in}{We suggest that you use a text box to insert a graphic (which is ideally a 300 dpi TIFF or EPS file, with all fonts embedded) because, in an document, this method is somewhat more stable than directly inserting a picture.
+}}
+      %\includegraphics[scale=1.0]{figurefile}
+      \caption{Inductance of oscillation winding on amorphous
+       magnetic core versus DC bias magnetic field}
+      \label{figurelabel}
+   \end{figure}
+   
+
+Figure Labels: Use 8 point Times New Roman for Figure labels. Use words rather than symbols or abbreviations when writing Figure axis labels to avoid confusing the reader. As an example, write the quantity ÒMagnetizationÓ, or ÒMagnetization, MÓ, not just ÒMÓ. If including units in the label, present them within parentheses. Do not label axes only with units. In the example, write ÒMagnetization (A/m)Ó or ÒMagnetization {A[m(1)]}Ó, not just ÒA/mÓ. Do not label axes with a ratio of quantities and units. For example, write ÒTemperature (K)Ó, not ÒTemperature/K.Ó
+
+\section{CONCLUSIONS}
+
+A conclusion section is not required. Although a conclusion may review the main points of the paper, do not replicate the abstract as the conclusion. A conclusion might elaborate on the importance of the work or suggest applications and extensions. 
+
+\addtolength{\textheight}{-12cm}   % This command serves to balance the column lengths
+                                  % on the last page of the document manually. It shortens
+                                  % the textheight of the last page by a suitable amount.
+                                  % This command does not take effect until the next page
+                                  % so it should come on the page before the last. Make
+                                  % sure that you do not shorten the textheight too much.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{APPENDIX}
+
+Appendixes should appear before the acknowledgment.
+
+\section*{ACKNOWLEDGMENT}
+
+The preferred spelling of the word ÒacknowledgmentÓ in America is without an ÒeÓ after the ÒgÓ. Avoid the stilted expression, ÒOne of us (R. B. G.) thanks . . .Ó  Instead, try ÒR. B. G. thanksÓ. Put sponsor acknowledgments in the unnumbered footnote on the first page.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+References are important to the reader; therefore, each citation must be complete and correct. If at all possible, references should be commonly available publications.
+
+
+
+\begin{thebibliography}{99}
+
+\bibitem{c1} G. O. Young, ÒSynthetic structure of industrial plastics (Book style with paper title and editor),Ó 	in Plastics, 2nd ed. vol. 3, J. Peters, Ed.  New York: McGraw-Hill, 1964, pp. 15Ð64.
+\bibitem{c2} W.-K. Chen, Linear Networks and Systems (Book style).	Belmont, CA: Wadsworth, 1993, pp. 123Ð135.
+
+\end{thebibliography}
+
+
+
+
+\end{document}
+

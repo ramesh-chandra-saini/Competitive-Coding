@@ -1,0 +1,27 @@
+//PPT
+
+https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=8&ved=0ahUKEwil2bXA5qDPAhUGLo8KHbTqCvIQFghSMAc&url=http%3A%2F%2Fwww.cs.columbia.edu%2Figert%2Fcourses%2FEECS6898%2Fpresentation_slides%2Fbhatt.pptx&usg=AFQjCNGH3KHoEzM5Ej3Nmzs5svpbQn9aAQ&sig2=z70NbdPLACn7yxlsm_--6g&cad=rja
+
+//IEEE PAPER - Stock Market Forecast Using Sentiment Analysis 
+http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7100399
+
+
+http://cs229.stanford.edu/proj2011/GoelMittal-StockMarketPredictionUsingTwitterSentimentAnalysis.pdf
+
+http://www.ingentaconnect.com/content/aea/jep/2007/00000021/00000002/art00007
+
+
+//implementation detail
+
+http://www.kdnuggets.com/2015/11/tutorial-twitter-sentiment-analysis.html
+
+//sentiment analysis helpful api
+http://help.sentiment140.com/api
+
+//text processing api
+https://github.com/markolson/kickscraper
+
+
+
+
+

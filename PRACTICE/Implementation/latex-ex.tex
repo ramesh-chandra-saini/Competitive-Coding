@@ -1,0 +1,264 @@
+\documentclass{article}
+\author{Ian Voysey}
+\title{\LaTeX Examples}
+\date{\today}
+
+\usepackage{fullpage}
+\usepackage{amsmath, enumerate, url, ulem, algorithmic, polynom, subfig}
+
+\begin{document}
+\maketitle
+\section{Text}
+\label{sec:text}
+You type text into \LaTeX like this. It's pretty easy. You can put it anywhere
+inside the document environment and it'll show up somewhere on the page. You
+can even make stuff \textbf{bold faced}, or \texttt{monospaced}.
+
+To start a new paragraph, just leave a blank line. Don't worry about the
+margins or spacing too much---\LaTeX knows how to deal with that better than
+you do.
+
+Everything should be thought of in terms of sections, environments, and
+commands. That's all that changes the output. Text looks wrong when it's not
+inside of something like that---generally speaking.
+
+Quotation marks are a little weird: you use single quotes and back tics
+instead of regular quotation\footnote{Oh, you can have footnotes as well,
+  which are awesome} marks.
+\begin{quote}
+  In the famous last works of Socrates, ``I drank \uline{what}?''
+\end{quote}
+
+Everything that starts with a non-escaped backslash in \LaTeX is a
+command. Commands can take arguments: required ones go one each inside \{ \};
+optional ones inside [ ]. You can make you own commands if you want, and
+sometime's it's really helpful.
+
+Fun fact: \LaTeX is Turing Complete. Scary, no?
+
+\section{Lists}
+Lists are a great way to keep your ducks in a row!
+
+\subsection{Unordered Lists}
+\begin{itemize}
+  \item First duck
+  \item Second duck
+  \item Third duck
+  \item \ldots
+\end{itemize}
+
+\subsection{Ordered Lists}
+You can have normal ordered lists.
+\begin{enumerate}
+  \item First duck
+  \item Second duck
+  \item Third duck
+  \item \ldots
+\end{enumerate}
+
+\subsection{Nested Lists}
+You can nest lists---it doesn't matter that one of the nestings is an
+unordered list; it's all just text to \LaTeX. \LaTeX will also change the way
+that it enumerates any of the ordered lists in the nesting intellegently.
+\begin{enumerate}
+  \item First duck
+  \item Second duck
+  \item Third duck
+  \item \ldots
+  \item
+    \begin{enumerate}
+    \item First duck
+    \item
+      \begin{itemize}
+      \item First duck
+      \item Second duck
+      \item Third duck
+      \item \ldots
+      \item
+        \begin{enumerate}
+        \item First duck
+        \item Second duck
+        \item Third duck
+        \item
+          \begin{enumerate}
+          \item First duck
+          \item Second duck
+          \item Third duck
+          \item \ldots
+          \end{enumerate}
+        \end{enumerate}
+      \end{itemize}
+    \item Third duck
+    \item \ldots
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Cutely Ordered Lists}
+You can also sugguest how \LaTeX labels your lists for you. It will try to
+guess how to increment whatever you put in the square brackets---which denote
+optional arguments.
+\begin{enumerate}[a.]
+  \item First duck
+  \item Second duck
+  \item Third duck
+  \item \ldots
+\end{enumerate}
+
+If you wrap things inside \{ \}, \LaTeX treats them as atomic. The enumerate
+environment won't try to increment a large atomic thing that it doesn't
+understand, and you can use this to protect chunks of text. This lets you have
+some really nice lists if you want. This is typically most helpful for proofs
+by cases.
+\begin{enumerate}[{Case} I:]
+  \item First duck
+  \item Second duck
+  \item Third duck
+  \item \ldots
+\end{enumerate}
+
+\section{Code Blocks}
+Typesetting code is pretty important. There are packages that try to emulate
+syntax highlighting with bold type, italic type, etc. They generally fail to
+be readable at all. A good other option is to use the verbatim environment,
+which reproduces the text inside of it exactly as it appears and in a
+typewriter font.
+
+\begin{verbatim}
+  public static void main(String [] args){
+     System.out.println("Hello, World!");
+  }
+\end{verbatim}
+
+If you're doing pseudocode for an algorithm, often the smallcaps font looks
+very nice to describe the algorithm name. So you might say that
+\textsc{BubbleSort} is an in-place sort while \textsc{MergeSort} uses a lot of
+space on the stack for its recursive calls.
+
+The algorithmic package typesets pseudocode pretty well, giving you a small
+collection of macros to explain most of the common concepts.
+
+\begin{algorithmic}
+\IF {$i\geq maxval$}
+        \STATE $i\gets 0$
+\ELSE
+        \IF {$i+k\leq maxval$}
+                \STATE $i\gets i+k$
+        \ENDIF
+\ENDIF
+\end{algorithmic}
+
+\section{Mathematics (Hooray!)}
+You can flip into mathmode whenever you want by putting things inside dollar
+signs: $\{1, \ldots, 10, \ldots, \omega, \ldots, \omega + \omega, \ldots \}$
+or double dollar signs: $$\sum_{i=0}^{n-1} 2^i = 2^n$$ Things inside single
+dollar signs get put inline, where as double dollar sign math gets centered
+and made large. Here's another cool example of
+that: $$\polylongdiv{x^3-7x+6}{x-1}$$
+
+For long chunks of math, you can put things inside the align or align*
+environments. \texttt{align} is just like \texttt{align*} except it numbers
+the lines of math you enter so you can refer to them unambiguously later. You
+can use the \& character to align things in \texttt{align} and \texttt{align*}
+equally.
+
+\begin{align}
+  x &= 1 &\text{define x}\\
+  y &= \mathit{Ackermann}(x,x) &\text{define y}\\
+  z &= \sum_i=0^n 2^i = 2^n &\text{define z}
+\end{align}
+
+\section{Grids}
+\begin{tabular}{c|c|lll}
+  hello & world & hello & world & hello \\
+  \hline
+  \hline
+  hell\"{o} & w\'{o}rld & $\sum_{x=1}^\infty x$ & world & hello \\
+  hello & world & hello & world & hello \\
+\end{tabular}
+
+\section{Labels, References}
+
+Labels and references are great. You can use the commands \texttt{label} and
+\texttt{ref} to create labels and then refer to them later. This way it
+doesn't matter if you move your text around, the section numbers will adjust
+themselves. Examples follow in section \ref{sect:floats}
+
+\section{Tables, Figures, Floats}
+\label{sect:floats}
+
+Floats are environments---typically \texttt{figure} or \texttt{table}, but
+more generally \texttt{float}---that wrap diagrams and tables. They can wrap
+anything that needs a caption and needs to float around in the text to look
+right. Here are some examples.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{c|c|lll}
+    hello & world & hello & world & hello \\
+    \hline
+    \hline
+    hell\"{o} & w\'{o}rld & $\sum_{x=1}^\infty x$ & world & hello \\
+    hello & world & hello & world & hello \\
+  \end{tabular}
+  \caption{The Caption!}
+\end{table}
+
+\begin{table}[h]
+  \centering
+  \caption{The Caption!}
+  \begin{tabular}{c|c|lll}
+    hello & world & hello & world & hello \\
+    \hline
+    \hline
+    hell\"{o} & w\'{o}rld & $\sum_{x=1}^\infty x$ & world & hello \\
+    hello & world & hello & world & hello \\
+  \end{tabular}
+  \label{tab:silly}
+\end{table}
+
+\begin{figure}[h]
+  \centering
+  \begin{algorithmic}
+    \IF {$i\geq maxval$}
+    \STATE $i\gets 0$
+    \ELSE
+    \IF {$i+k\leq maxval$}
+    \STATE $i\gets i+k$
+    \ENDIF
+    \ENDIF
+  \end{algorithmic}
+  \caption{Some PseudoCode}
+\end{figure}
+
+You can also have subfloats to have floating elements within floats. A
+practical example can be found in Figure \ref{fig:subfigs}.
+
+\begin{figure}[h!]
+  \centering
+  \subfloat[Notation]
+           {
+             \begin{tabular}{ll}
+               1. & $T(n) \in O \left (f(n) \right )$\\
+               2. & $T(n) \in \Theta \left (f(n) \right )$\\
+               3. & $T(n) \in \Omega \left (f(n) \right )$\\
+             \end{tabular}
+           }
+  \subfloat[Definitions]
+           {
+             \begin{tabular}{ll}
+               1. & $\exists c > 0 \exists n_0 > 0 \forall n > n_0, T(n) \leq
+               cf(n)$\\
+               2. & $\exists c > 0 \exists n_0 > 0 \forall n > n_0, T(n) \geq
+               cf(n)$\\
+               3. & $\exists c_1 > 0 \exists c_2 > 0 \exists n_0 > 0 \forall n
+               > n_0, c_1f(n) \leq T(n) \leq c_2f(n)$\\
+             \end{tabular}
+           }
+           \caption{Table from the asymptotics worksheet with subfigures}
+           \label{fig:subfigs}
+\end{figure}
+
+So anyway later in life I can say that I showed you how to cram equations into
+tabular environments in table \ref{tab:silly}. I can also reference all the
+way back to section \ref{sec:text} without messing up the counters.
+\end{document}

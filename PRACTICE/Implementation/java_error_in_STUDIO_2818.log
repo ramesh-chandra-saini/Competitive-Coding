@@ -1,0 +1,1500 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007ffae1f69a7a, pid=2818, tid=0x00007ffad04e1700
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_101-b13) (build 1.8.0_101-b13)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.101-b13 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# v  ~BufferBlob::jni_fast_GetLongField
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007ffaf031f000):  JavaThread "AWT-XAWT" daemon [_thread_in_native, id=3010, stack(0x00007ffad03e1000,0x00007ffad04e2000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x00007ffaf9113400, RBX=0x00007ffaf031f1f8, RCX=0x00007ffaf9b77320, RDX=0x0000000000000042
+RSP=0x00007ffad04e06f8, RBP=0x00007ffad04e0720, RSI=0x0000000000000000, RDI=0x00007ffaf031f1f8
+R8 =0x00000000c63b2ca0, R9 =0x0000000000000000, R10=0x0000000000005454, R11=0x00007ffae20aac58
+R12=0x00007ffa602f9870, R13=0x0000000000000000, R14=0x00007ffae04c77e0, R15=0x00007ffaf031f000
+RIP=0x00007ffae1f69a7a, EFLAGS=0x0000000000010246, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007ffad04e06f8)
+0x00007ffad04e06f8:   00007ffae02a5ef1 00007ffaf48e6128
+0x00007ffad04e0708:   00007ffa602f9870 00007ffad04e07d0
+0x00007ffad04e0718:   00007ffad04e07a0 0000000000000000
+0x00007ffad04e0728:   00007ffad1d2cae8 00007ffaf48e6128
+0x00007ffad04e0738:   00007ffad04e0760 0000000000000000
+0x00007ffad04e0748:   00007ffad1d249a3 00007ffad04e07d0
+0x00007ffad04e0758:   00007ffae029f12f 00007ffad04e07b0
+0x00007ffad04e0768:   00007ffae20aacf6 0000000000800003
+0x00007ffad04e0778:   00007ffae29016e8 c569afd0c569afd0
+0x00007ffad04e0788:   00000000c569afd0 0000000000000002
+0x00007ffad04e0798:   00000000b3c6c5b0 00000000c4dc2360
+0x00007ffad04e07a8:   00000000c4dd0928 00007ffad04e0830
+0x00007ffad04e07b8:   00007ffae1f07a90 00007ffad04e0830
+0x00007ffad04e07c8:   00007ffae1f07a90 0000000000000000
+0x00007ffad04e07d8:   00007ffae1f07dd0 00007ffa9c001020
+0x00007ffad04e07e8:   00000000c4edd678 00007ffad04e07f0
+0x00007ffad04e07f8:   00007ffaf48c57bc 00007ffad04e0878
+0x00007ffad04e0808:   00007ffaf48cec28 00007ffa464bc9b0
+0x00007ffad04e0818:   00007ffaf48c58f8 00007ffad04e07d0
+0x00007ffad04e0828:   00007ffad04e0870 00007ffad04e08c0
+0x00007ffad04e0838:   00007ffae1f082bd 0000000000000000
+0x00007ffad04e0848:   0000000000000000 0000000000000000
+0x00007ffad04e0858:   0000000000000000 0000000000000000
+0x00007ffad04e0868:   00000000c4edd678 deaddeaf00000000
+0x00007ffad04e0878:   00000000c4ee6548 00007ffad04e0880
+0x00007ffad04e0888:   00007ffaf48c55fd 00007ffad04e08d0
+0x00007ffad04e0898:   00007ffaf48cec28 0000000000000000
+0x00007ffad04e08a8:   00007ffaf48c5608 00007ffad04e0870
+0x00007ffad04e08b8:   00007ffad04e08d0 00007ffad04e0918
+0x00007ffad04e08c8:   00007ffae1f08302 00000000c4ee6548
+0x00007ffad04e08d8:   00007ffad04e08d8 00007ffaf4202993
+0x00007ffad04e08e8:   00007ffad04e0928 00007ffaf4289e98 
+
+Instructions: (pc=0x00007ffae1f69a7a)
+0x00007ffae1f69a5a:   00 00 00 00 00 00 44 8b 15 21 94 1e 17 4c 8b ce
+0x00007ffae1f69a6a:   41 f6 c2 01 0f 85 2e 00 00 00 4d 33 ca 4d 33 ca
+0x00007ffae1f69a7a:   4d 8b 09 4c 8b da 49 c1 eb 02 4b 8b 04 19 49 bb
+0x00007ffae1f69a8a:   88 2e 15 f9 fa 7f 00 00 4c 33 d8 4c 33 d8 45 3b 
+
+Register to memory mapping:
+
+RAX=0x00007ffaf9113400: <offset 0xf82400> in /usr/lib/jvm/java-8-oracle/jre/lib/amd64/server/libjvm.so at 0x00007ffaf8191000
+RBX=0x00007ffaf031f1f8 is an unknown value
+RCX=0x00007ffaf9b77320: <offset 0x219320> in /lib/x86_64-linux-gnu/libpthread.so.0 at 0x00007ffaf995e000
+RDX=0x0000000000000042 is an unknown value
+RSP=0x00007ffad04e06f8 is pointing into the stack for thread: 0x00007ffaf031f000
+RBP=0x00007ffad04e0720 is pointing into the stack for thread: 0x00007ffaf031f000
+RSI=0x0000000000000000 is an unknown value
+RDI=0x00007ffaf031f1f8 is an unknown value
+R8 =0x00000000c63b2ca0 is an oop
+java.util.logging.Logger 
+ - klass: 'java/util/logging/Logger'
+R9 =0x0000000000000000 is an unknown value
+R10=0x0000000000005454 is an unknown value
+R11=0x00007ffae20aac58 is at entry_point+24 in (nmethod*)0x00007ffae20aaad0
+R12=0x00007ffa602f9870 is an unknown value
+R13=0x0000000000000000 is an unknown value
+R14=0x00007ffae04c77e0: <offset 0x2587e0> in /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libawt_xawt.so at 0x00007ffae026f000
+R15=0x00007ffaf031f000 is a thread
+
+
+Stack: [0x00007ffad03e1000,0x00007ffad04e2000],  sp=0x00007ffad04e06f8,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+v  ~BufferBlob::jni_fast_GetLongField
+C  [libX11.so.6+0x61ae8]  _XimServerDestroy+0x58
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 5489  sun.awt.X11.XlibWrapper.XFilterEvent(JJ)Z (0 bytes) @ 0x00007ffae20aac84 [0x00007ffae20aac40+0x44]
+j  sun.awt.X11.XToolkit.run(Z)V+300
+j  sun.awt.X11.XToolkit.run()V+5
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000001261800 JavaThread "XToolkt-Shutdown-Thread" [_thread_blocked, id=8342, stack(0x00007ffa4674b000,0x00007ffa4684c000)]
+  0x0000000001261000 JavaThread "Thread-6" daemon [_thread_in_vm, id=8341, stack(0x00007ffa5c770000,0x00007ffa5c871000)]
+  0x0000000001260000 JavaThread "Shutdown tracker" [_thread_in_vm, id=8340, stack(0x00007ffa43f7b000,0x00007ffa4407c000)]
+  0x000000000125f800 JavaThread "gradle-shutdown-hook" [_thread_in_vm, id=8339, stack(0x00007ffa55cc5000,0x00007ffa55dc6000)]
+  0x000000000125e800 JavaThread "Thread-3" [_thread_in_vm, id=8338, stack(0x00007ffa4ebfc000,0x00007ffa4ecfd000)]
+  0x000000000125c000 JavaThread "Thread-5" [_thread_blocked, id=8310, stack(0x00007ffa54dc2000,0x00007ffa54ec3000)]
+  0x00000000012a7000 JavaThread "Shutdown hook - logging" [_thread_blocked, id=8309, stack(0x00007ffa54bc0000,0x00007ffa54cc1000)]
+  0x00000000010d5000 JavaThread "Thread-0" [_thread_blocked, id=8308, stack(0x00007ffa43e7a000,0x00007ffa43f7b000)]
+  0x00007ffab001a800 JavaThread "SIGHUP handler" daemon [_thread_blocked, id=8307, stack(0x00007ffa573f5000,0x00007ffa574f6000)]
+  0x0000000001205800 JavaThread "JobScheduler FJ pool 0/4" daemon [_thread_blocked, id=8262, stack(0x00007ffa5c013000,0x00007ffa5c114000)]
+  0x0000000001286800 JavaThread "ApplicationImpl pooled thread 20" daemon [_thread_blocked, id=6592, stack(0x00007ffa448d5000,0x00007ffa449d6000)]
+  0x00007ffa70031800 JavaThread "ApplicationImpl pooled thread 19" daemon [_thread_blocked, id=6538, stack(0x00007ffa4d29c000,0x00007ffa4d39d000)]
+  0x00007ffa70348800 JavaThread "ApplicationImpl pooled thread 18" daemon [_thread_blocked, id=6185, stack(0x00007ffa447d4000,0x00007ffa448d5000)]
+  0x00007ffa700e9000 JavaThread "Alarm pool(own)" daemon [_thread_blocked, id=5741, stack(0x00007ffa880b4000,0x00007ffa881b5000)]
+  0x00007ffa7035e000 JavaThread "Alarm pool(own)" daemon [_thread_blocked, id=5487, stack(0x00007ffa54cc1000,0x00007ffa54dc2000)]
+  0x00007ffa70111000 JavaThread "ApplicationImpl pooled thread 14" daemon [_thread_blocked, id=4824, stack(0x00007ffa47489000,0x00007ffa4758a000)]
+  0x00007ffa7035d800 JavaThread "Alarm pool(own)" daemon [_thread_blocked, id=4806, stack(0x00007ffa4c04a000,0x00007ffa4c14b000)]
+  0x00007ffa7034f800 JavaThread "ApplicationImpl pooled thread 12" daemon [_thread_blocked, id=4173, stack(0x00007ffa47388000,0x00007ffa47489000)]
+  0x00007ffa7037b800 JavaThread "Alarm pool(own)" daemon [_thread_blocked, id=3665, stack(0x00007ffa47287000,0x00007ffa47388000)]
+  0x00007ffab5005000 JavaThread "AsyncTask #5" daemon [_thread_blocked, id=3660, stack(0x00007ffa4c14b000,0x00007ffa4c24c000)]
+  0x00007ffaf04e8000 JavaThread "AsyncTask #4" daemon [_thread_blocked, id=3659, stack(0x00007ffa4c24c000,0x00007ffa4c34d000)]
+  0x00007ffab5004000 JavaThread "AsyncTask #3" daemon [_thread_blocked, id=3658, stack(0x00007ffa4eefd000,0x00007ffa4effe000)]
+  0x00007ffab465c800 JavaThread "AsyncTask #2" daemon [_thread_blocked, id=3657, stack(0x00007ffa54abf000,0x00007ffa54bc0000)]
+  0x00007ffab4308800 JavaThread "AsyncTask #1" daemon [_thread_blocked, id=3656, stack(0x00007ffa4f1fe000,0x00007ffa4f2ff000)]
+  0x00007ffa8418d000 JavaThread "Change List Updater" daemon [_thread_blocked, id=3632, stack(0x00007ffa4eafb000,0x00007ffa4ebfc000)]
+  0x00007ffa8418f000 JavaThread "Device List Monitor" [_thread_in_native, id=3554, stack(0x00007ffa4f4ff000,0x00007ffa4f600000)]
+  0x00007ffacc03d000 JavaThread "process reaper" daemon [_thread_in_native, id=3543, stack(0x00007ffa5d19e000,0x00007ffa5d1d7000)]
+  0x00007ffa8413a000 JavaThread "Monitor" [_thread_in_native, id=3540, stack(0x00007ffa550c3000,0x00007ffa551c4000)]
+  0x00007ffa63616800 JavaThread "FS Synchronizer" daemon [_thread_blocked, id=3459, stack(0x00007ffa541a2000,0x00007ffa542a3000)]
+  0x00007ffa63823000 JavaThread "RefCountingStorage write content helper" [_thread_blocked, id=3434, stack(0x00007ffa540a1000,0x00007ffa541a2000)]
+  0x00007ffa63769000 JavaThread "Icons" daemon [_thread_blocked, id=3397, stack(0x00007ffa546a3000,0x00007ffa547a4000)]
+  0x00007ffa6330b800 JavaThread "EditorNotifications executor" daemon [_thread_blocked, id=3355, stack(0x00007ffa557c4000,0x00007ffa558c5000)]
+  0x00007ffa7807d800 JavaThread "Encoding detection thread" daemon [_thread_blocked, id=3353, stack(0x00007ffa5f318000,0x00007ffa5f419000)]
+  0x00007ffa63313000 JavaThread "TimerQueue" daemon [_thread_blocked, id=3351, stack(0x00007ffa56df3000,0x00007ffa56ef4000)]
+  0x00007ffa604ec800 JavaThread "Timer-0" daemon [_thread_blocked, id=3350, stack(0x00007ffa570f4000,0x00007ffa571f5000)]
+  0x00007ffa6050e800 JavaThread "Animations" daemon [_thread_blocked, id=3347, stack(0x00007ffa57aff000,0x00007ffa57c00000)]
+  0x00007ffa70088800 JavaThread "Alarm pool(shared)" daemon [_thread_blocked, id=3344, stack(0x00007ffa5f419000,0x00007ffa5f51a000)]
+  0x00007ffa61901000 JavaThread "Document commit thread" [_thread_blocked, id=3320, stack(0x00007ffa5c871000,0x00007ffa5c972000)]
+  0x00007ffa58098000 JavaThread "ApplicationImpl pooled thread 5" [_thread_blocked, id=3319, stack(0x00007ffa5cd82000,0x00007ffa5ce83000)]
+  0x00007ffa60bd1800 JavaThread "FocusManager timer" daemon [_thread_blocked, id=3312, stack(0x00007ffa5ce83000,0x00007ffa5cf84000)]
+  0x00007ffa60bd0000 JavaThread "Shared SimpleTimer" daemon [_thread_blocked, id=3311, stack(0x00007ffa5da23000,0x00007ffa5db24000)]
+  0x00007ffa60886800 JavaThread "Performance watcher" [_thread_blocked, id=3301, stack(0x00007ffa5d621000,0x00007ffa5d722000)]
+  0x00007ffa60885000 JavaThread "ApplicationImpl pooled thread 4" [_thread_blocked, id=3300, stack(0x00007ffa5d722000,0x00007ffa5d823000)]
+  0x00007ffa6048f800 JavaThread "StoreRefreshStatusThread" daemon [_thread_blocked, id=3293, stack(0x00007ffa5db24000,0x00007ffa5dc25000)]
+  0x00007ffa6048e000 JavaThread "ApplicationImpl pooled thread 3" [_thread_blocked, id=3292, stack(0x00007ffa5dc25000,0x00007ffa5dd26000)]
+  0x00007ffa602bc000 JavaThread "ApplicationImpl pooled thread 2" [_thread_blocked, id=3291, stack(0x00007ffa5dd26000,0x00007ffa5de27000)]
+  0x00007ffa602b9800 JavaThread "ApplicationImpl pooled thread 1" [_thread_in_Java, id=3290, stack(0x00007ffa5de27000,0x00007ffa5df28000)]
+  0x00007ffa602c3000 JavaThread "Flushing thread" daemon [_thread_blocked, id=3288, stack(0x00007ffa8891d000,0x00007ffa88a1e000)]
+  0x00007ffa60099000 JavaThread "ZipFileCache Dispose" daemon [_thread_blocked, id=3094, stack(0x00007ffa881b5000,0x00007ffa882b6000)]
+  0x00007ffa60020800 JavaThread "Periodic tasks thread" daemon [_thread_blocked, id=3028, stack(0x00007ffa89278000,0x00007ffa89379000)]
+  0x00007ffa700f4800 JavaThread "AWT-EventQueue-0 1.5#AI-141.2456560, eap:false" [_thread_blocked, id=3027, stack(0x00007ffa8871b000,0x00007ffa8881c000)]
+  0x00007ffa700f3000 JavaThread "AWT-Shutdown" [_thread_blocked, id=3026, stack(0x00007ffa8881c000,0x00007ffa8891d000)]
+  0x00007ffa7006c000 JavaThread "Lock thread" [_thread_in_native, id=3020, stack(0x00007ffa88f3e000,0x00007ffa8903f000)]
+  0x00007ffa700b7800 JavaThread "process reaper" daemon [_thread_blocked, id=3019, stack(0x00007ffa8903f000,0x00007ffa89078000)]
+  0x00007ffaf000b000 JavaThread "DestroyJavaVM" [_thread_blocked, id=2819, stack(0x00007ffaf9c76000,0x00007ffaf9d77000)]
+=>0x00007ffaf031f000 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=3010, stack(0x00007ffad03e1000,0x00007ffad04e2000)]
+  0x00007ffaf0306800 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=3009, stack(0x00007ffad0af2000,0x00007ffad0bf3000)]
+  0x00007ffaf0109000 JavaThread "Service Thread" daemon [_thread_blocked, id=2833, stack(0x00007ffae0d3c000,0x00007ffae0e3d000)]
+  0x00007ffaf00fe000 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=2832, stack(0x00007ffae0e3d000,0x00007ffae0f3e000)]
+  0x00007ffaf00fc000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=2831, stack(0x00007ffae0f3e000,0x00007ffae103f000)]
+  0x00007ffaf00f9800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=2830, stack(0x00007ffae103f000,0x00007ffae1140000)]
+  0x00007ffaf00f7800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=2829, stack(0x00007ffae1140000,0x00007ffae1241000)]
+  0x00007ffaf00f6000 JavaThread "Surrogate Locker Thread (Concurrent GC)" daemon [_thread_blocked, id=2828, stack(0x00007ffae1241000,0x00007ffae1342000)]
+  0x00007ffaf00c3800 JavaThread "Finalizer" daemon [_thread_blocked, id=2827, stack(0x00007ffae1a24000,0x00007ffae1b25000)]
+  0x00007ffaf00be800 JavaThread "Reference Handler" daemon [_thread_blocked, id=2826, stack(0x00007ffae1b25000,0x00007ffae1c26000)]
+
+Other Threads:
+  0x00007ffaf00b7000 VMThread [stack: 0x00007ffae1c26000,0x00007ffae1d27000] [id=2825]
+  0x00007ffaf010c000 WatcherThread [stack: 0x00007ffae0c3b000,0x00007ffae0d3c000] [id=2834]
+
+VM state:synchronizing (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007ffaf0007480] Safepoint_lock - owner thread: 0x00007ffaf00b7000
+[0x00007ffaf0007500] Threads_lock - owner thread: 0x00007ffaf00b7000
+
+Heap:
+ par new generation   total 78656K, used 71026K [0x00000000b0000000, 0x00000000b5550000, 0x00000000c4cc0000)
+  eden space 69952K,  93% used [0x00000000b0000000, 0x00000000b3fd84d0, 0x00000000b4450000)
+  from space 8704K,  64% used [0x00000000b4450000, 0x00000000b49d45a0, 0x00000000b4cd0000)
+  to   space 8704K,   0% used [0x00000000b4cd0000, 0x00000000b4cd0000, 0x00000000b5550000)
+ concurrent mark-sweep generation total 631448K, used 377443K [0x00000000c4cc0000, 0x00000000eb566000, 0x0000000100000000)
+ Metaspace       used 182131K, capacity 185150K, committed 200708K, reserved 1222656K
+  class space    used 24545K, capacity 25444K, committed 28280K, reserved 1048576K
+
+Card table byte_map: [0x00007ffaf63e9000,0x00007ffaf666a000] byte_map_base: 0x00007ffaf5e69000
+
+Marking Bits: (CMSBitMap*) 0x00007ffaf0063448
+ Bits: [0x00007ffaf4f3d000, 0x00007ffaf5e0a000)
+
+Mod Union Table: (CMSBitMap*) 0x00007ffaf0063508
+ Bits: [0x00007ffaf9c3a000, 0x00007ffaf9c75340)
+
+Polling page: 0x00007ffaf9d9b000
+
+CodeCache: size=230400Kb used=162442Kb max_used=163228Kb free=67957Kb
+ bounds [0x00007ffae1f00000, 0x00007ffaec030000, 0x00007ffaf0000000]
+ total_blobs=38604 nmethods=37419 adapters=1089
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 5594.228 Thread 0x00007ffaf00fc000 62611       4       com.intellij.uiDesigner.core.DimensionInfo::getPreferredSize (47 bytes)
+Event: 5594.237 Thread 0x00007ffaf00fc000 nmethod 62611 0x00007ffae283c5d0 code [0x00007ffae283c760, 0x00007ffae283caa8]
+Event: 5610.315 Thread 0x00007ffaf00f9800 62612       4       java.util.concurrent.FutureTask::set (36 bytes)
+Event: 5610.325 Thread 0x00007ffaf00f9800 nmethod 62612 0x00007ffae36fa9d0 code [0x00007ffae36fab40, 0x00007ffae36facc8]
+Event: 5710.855 Thread 0x00007ffaf00fe000 62613       1       com.intellij.ide.IdeEventQueue::access$1100 (5 bytes)
+Event: 5710.930 Thread 0x00007ffaf00fe000 nmethod 62613 0x00007ffae55de4d0 code [0x00007ffae55de620, 0x00007ffae55de710]
+Event: 5710.936 Thread 0x00007ffaf00fe000 62614       1       com.intellij.ide.IdeEventQueue::access$1200 (5 bytes)
+Event: 5710.937 Thread 0x00007ffaf00fe000 nmethod 62614 0x00007ffae7db8e50 code [0x00007ffae7db8fa0, 0x00007ffae7db9090]
+Event: 5718.176 Thread 0x00007ffaf00fc000 62616       4       io.netty.util.concurrent.SingleThreadEventExecutor::isShuttingDown (17 bytes)
+Event: 5718.706 Thread 0x00007ffaf00fc000 nmethod 62616 0x00007ffaebf876d0 code [0x00007ffaebf87820, 0x00007ffaebf878b8]
+
+GC Heap History (10 events):
+Event: 5591.129 GC heap before
+{Heap before GC invocations=909 (full 96):
+ par new generation   total 78656K, used 77696K [0x00000000b0000000, 0x00000000b5550000, 0x00000000c4cc0000)
+  eden space 69952K, 100% used [0x00000000b0000000, 0x00000000b4450000, 0x00000000b4450000)
+  from space 8704K,  88% used [0x00000000b4cd0000, 0x00000000b5460008, 0x00000000b5550000)
+  to   space 8704K,   0% used [0x00000000b4450000, 0x00000000b4450000, 0x00000000b4cd0000)
+ concurrent mark-sweep generation total 631448K, used 376155K [0x00000000c4cc0000, 0x00000000eb566000, 0x0000000100000000)
+ Metaspace       used 182103K, capacity 185150K, committed 200708K, reserved 1222656K
+  class space    used 24542K, capacity 25444K, committed 28280K, reserved 1048576K
+Event: 5591.143 GC heap after
+Heap after GC invocations=910 (full 96):
+ par new generation   total 78656K, used 3545K [0x00000000b0000000, 0x00000000b5550000, 0x00000000c4cc0000)
+  eden space 69952K,   0% used [0x00000000b0000000, 0x00000000b0000000, 0x00000000b4450000)
+  from space 8704K,  40% used [0x00000000b4450000, 0x00000000b47c66a0, 0x00000000b4cd0000)
+  to   space 8704K,   0% used [0x00000000b4cd0000, 0x00000000b4cd0000, 0x00000000b5550000)
+ concurrent mark-sweep generation total 631448K, used 377443K [0x00000000c4cc0000, 0x00000000eb566000, 0x0000000100000000)
+ Metaspace       used 182103K, capacity 185150K, committed 200708K, reserved 1222656K
+  class space    used 24542K, capacity 25444K, committed 28280K, reserved 1048576K
+}
+Event: 5591.567 GC heap before
+{Heap before GC invocations=910 (full 96):
+ par new generation   total 78656K, used 73497K [0x00000000b0000000, 0x00000000b5550000, 0x00000000c4cc0000)
+  eden space 69952K, 100% used [0x00000000b0000000, 0x00000000b4450000, 0x00000000b4450000)
+  from space 8704K,  40% used [0x00000000b4450000, 0x00000000b47c66a0, 0x00000000b4cd0000)
+  to   space 8704K,   0% used [0x00000000b4cd0000, 0x00000000b4cd0000, 0x00000000b5550000)
+ concurrent mark-sweep generation total 631448K, used 377443K [0x00000000c4cc0000, 0x00000000eb566000, 0x0000000100000000)
+ Metaspace       used 182103K, capacity 185150K, committed 200708K, reserved 1222656K
+  class space    used 24542K, capacity 25444K, committed 28280K, reserved 1048576K
+Event: 5591.578 GC heap after
+Heap after GC invocations=911 (full 96):
+ par new generation   total 78656K, used 4021K [0x00000000b0000000, 0x00000000b5550000, 0x00000000c4cc0000)
+  eden space 69952K,   0% used [0x00000000b0000000, 0x00000000b0000000, 0x00000000b4450000)
+  from space 8704K,  46% used [0x00000000b4cd0000, 0x00000000b50bd588, 0x00000000b5550000)
+  to   space 8704K,   0% used [0x00000000b4450000, 0x00000000b4450000, 0x00000000b4cd0000)
+ concurrent mark-sweep generation total 631448K, used 377443K [0x00000000c4cc0000, 0x00000000eb566000, 0x0000000100000000)
+ Metaspace       used 182103K, capacity 185150K, committed 200708K, reserved 1222656K
+  class space    used 24542K, capacity 25444K, committed 28280K, reserved 1048576K
+}
+Event: 5593.505 GC heap before
+{Heap before GC invocations=911 (full 96):
+ par new generation   total 78656K, used 73509K [0x00000000b0000000, 0x00000000b5550000, 0x00000000c4cc0000)
+  eden space 69952K,  99% used [0x00000000b0000000, 0x00000000b43dc1f8, 0x00000000b4450000)
+  from space 8704K,  46% used [0x00000000b4cd0000, 0x00000000b50bd588, 0x00000000b5550000)
+  to   space 8704K,   0% used [0x00000000b4450000, 0x00000000b4450000, 0x00000000b4cd0000)
+ concurrent mark-sweep generation total 631448K, used 377443K [0x00000000c4cc0000, 0x00000000eb566000, 0x0000000100000000)
+ Metaspace       used 182105K, capacity 185150K, committed 200708K, reserved 1222656K
+  class space    used 24542K, capacity 25444K, committed 28280K, reserved 1048576K
+Event: 5593.511 GC heap after
+Heap after GC invocations=912 (full 96):
+ par new generation   total 78656K, used 2555K [0x00000000b0000000, 0x00000000b5550000, 0x00000000c4cc0000)
+  eden space 69952K,   0% used [0x00000000b0000000, 0x00000000b0000000, 0x00000000b4450000)
+  from space 8704K,  29% used [0x00000000b4450000, 0x00000000b46ced90, 0x00000000b4cd0000)
+  to   space 8704K,   0% used [0x00000000b4cd0000, 0x00000000b4cd0000, 0x00000000b5550000)
+ concurrent mark-sweep generation total 631448K, used 377443K [0x00000000c4cc0000, 0x00000000eb566000, 0x0000000100000000)
+ Metaspace       used 182105K, capacity 185150K, committed 200708K, reserved 1222656K
+  class space    used 24542K, capacity 25444K, committed 28280K, reserved 1048576K
+}
+Event: 5597.813 GC heap before
+{Heap before GC invocations=912 (full 96):
+ par new generation   total 78656K, used 72507K [0x00000000b0000000, 0x00000000b5550000, 0x00000000c4cc0000)
+  eden space 69952K, 100% used [0x00000000b0000000, 0x00000000b4450000, 0x00000000b4450000)
+  from space 8704K,  29% used [0x00000000b4450000, 0x00000000b46ced90, 0x00000000b4cd0000)
+  to   space 8704K,   0% used [0x00000000b4cd0000, 0x00000000b4cd0000, 0x00000000b5550000)
+ concurrent mark-sweep generation total 631448K, used 377443K [0x00000000c4cc0000, 0x00000000eb566000, 0x0000000100000000)
+ Metaspace       used 182108K, capacity 185150K, committed 200708K, reserved 1222656K
+  class space    used 24542K, capacity 25444K, committed 28280K, reserved 1048576K
+Event: 5597.821 GC heap after
+Heap after GC invocations=913 (full 96):
+ par new generation   total 78656K, used 1935K [0x00000000b0000000, 0x00000000b5550000, 0x00000000c4cc0000)
+  eden space 69952K,   0% used [0x00000000b0000000, 0x00000000b0000000, 0x00000000b4450000)
+  from space 8704K,  22% used [0x00000000b4cd0000, 0x00000000b4eb3ec0, 0x00000000b5550000)
+  to   space 8704K,   0% used [0x00000000b4450000, 0x00000000b4450000, 0x00000000b4cd0000)
+ concurrent mark-sweep generation total 631448K, used 377443K [0x00000000c4cc0000, 0x00000000eb566000, 0x0000000100000000)
+ Metaspace       used 182108K, capacity 185150K, committed 200708K, reserved 1222656K
+  class space    used 24542K, capacity 25444K, committed 28280K, reserved 1048576K
+}
+Event: 5598.196 GC heap before
+{Heap before GC invocations=913 (full 96):
+ par new generation   total 78656K, used 71887K [0x00000000b0000000, 0x00000000b5550000, 0x00000000c4cc0000)
+  eden space 69952K, 100% used [0x00000000b0000000, 0x00000000b4450000, 0x00000000b4450000)
+  from space 8704K,  22% used [0x00000000b4cd0000, 0x00000000b4eb3ec0, 0x00000000b5550000)
+  to   space 8704K,   0% used [0x00000000b4450000, 0x00000000b4450000, 0x00000000b4cd0000)
+ concurrent mark-sweep generation total 631448K, used 377443K [0x00000000c4cc0000, 0x00000000eb566000, 0x0000000100000000)
+ Metaspace       used 182108K, capacity 185150K, committed 200708K, reserved 1222656K
+  class space    used 24542K, capacity 25444K, committed 28280K, reserved 1048576K
+Event: 5598.207 GC heap after
+Heap after GC invocations=914 (full 96):
+ par new generation   total 78656K, used 5649K [0x00000000b0000000, 0x00000000b5550000, 0x00000000c4cc0000)
+  eden space 69952K,   0% used [0x00000000b0000000, 0x00000000b0000000, 0x00000000b4450000)
+  from space 8704K,  64% used [0x00000000b4450000, 0x00000000b49d45a0, 0x00000000b4cd0000)
+  to   space 8704K,   0% used [0x00000000b4cd0000, 0x00000000b4cd0000, 0x00000000b5550000)
+ concurrent mark-sweep generation total 631448K, used 377443K [0x00000000c4cc0000, 0x00000000eb566000, 0x0000000100000000)
+ Metaspace       used 182108K, capacity 185150K, committed 200708K, reserved 1222656K
+  class space    used 24542K, capacity 25444K, committed 28280K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 5558.019 Thread 0x00007ffa700f4800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007ffae301a530 method=java.awt.geom.RoundRectangle2D$Double.isEmpty()Z @ 6
+Event: 5558.020 Thread 0x00007ffa700f4800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007ffae5385eac method=java.awt.geom.RoundRectangle2D$Double.isEmpty()Z @ 6
+Event: 5558.020 Thread 0x00007ffa700f4800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007ffae4949f24 method=java.awt.geom.RoundRectangle2D$Double.isEmpty()Z @ 6
+Event: 5560.309 Thread 0x00007ffa700f4800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007ffae6535cd0 method=java.util.AbstractMap.putAll(Ljava/util/Map;)V @ 22
+Event: 5560.813 Thread 0x00007ffa700f4800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007ffae6535cd0 method=java.util.AbstractMap.putAll(Ljava/util/Map;)V @ 22
+Event: 5561.741 Thread 0x00007ffa700f4800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007ffae6535cd0 method=java.util.AbstractMap.putAll(Ljava/util/Map;)V @ 22
+Event: 5587.487 Thread 0x00007ffa60020800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007ffae524b46c method=java.util.concurrent.FutureTask.run()V @ 31
+Event: 5590.709 Thread 0x00007ffa60885000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007ffae32e2f54 method=java.util.regex.Pattern$Dollar.match(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Z @ 32
+Event: 5590.709 Thread 0x00007ffa60885000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007ffae996ad4c method=com.intellij.diagnostic.logging.LogConsoleBase.addMessage(Ljava/lang/String;)V @ 146
+Event: 5659.089 Thread 0x00007ffaf031f000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007ffae90626c8 method=sun.awt.X11.XToolkit.run(Z)V @ 132
+
+Internal exceptions (10 events):
+Event: 5180.677 Thread 0x0000000001205800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000b3eb9560) thrown at [/HUDSON3/workspace/8-2-build-linux-amd64/jdk8u101/7261/hotspot/src/share/vm/prims/jni.cpp, line 1613]
+Event: 5180.678 Thread 0x0000000001205800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000b3ec2f08) thrown at [/HUDSON3/workspace/8-2-build-linux-amd64/jdk8u101/7261/hotspot/src/share/vm/prims/jni.cpp, line 1613]
+Event: 5180.679 Thread 0x0000000001205800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000b3ecc550) thrown at [/HUDSON3/workspace/8-2-build-linux-amd64/jdk8u101/7261/hotspot/src/share/vm/prims/jni.cpp, line 1613]
+Event: 5180.681 Thread 0x0000000001205800 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000b3edbe20) thrown at [/HUDSON3/workspace/8-2-build-linux-amd64/jdk8u101/7261/hotspot/src/share/vm/prims/jni.cpp, line 1613]
+Event: 5263.669 Thread 0x00007ffa700f4800 Exception <a 'java/lang/UnsupportedOperationException': > (0x00000000b27fbbe8) thrown at [/HUDSON3/workspace/8-2-build-linux-amd64/jdk8u101/7261/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 5450.076 Thread 0x00007ffa700f4800 Exception <a 'java/lang/UnsupportedOperationException': > (0x00000000b0baa200) thrown at [/HUDSON3/workspace/8-2-build-linux-amd64/jdk8u101/7261/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 5481.475 Thread 0x00007ffa6c0ca000 Exception <a 'java/net/SocketException': Protocol family unavailable> (0x00000000b034a8e8) thrown at [/HUDSON3/workspace/8-2-build-linux-amd64/jdk8u101/7261/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 5528.357 Thread 0x000000000125c000 Exception <a 'java/net/SocketException': Protocol family unavailable> (0x00000000b1dc3cd8) thrown at [/HUDSON3/workspace/8-2-build-linux-amd64/jdk8u101/7261/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 5555.601 Thread 0x0000000001205800 Exception <a 'java/net/SocketException': Protocol family unavailable> (0x00000000b38ced40) thrown at [/HUDSON3/workspace/8-2-build-linux-amd64/jdk8u101/7261/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 5587.486 Thread 0x00007ffa60020800 Implicit null exception at 0x00007ffae524b25f to 0x00007ffae524b459
+
+Events (10 events):
+Event: 5736.130 Executing VM operation: RevokeBias
+Event: 5736.131 Executing VM operation: RevokeBias done
+Event: 5736.131 Thread 0x0000000001205800 Thread exited: 0x0000000001205800
+Event: 5744.131 Thread 0x0000000001205800 Thread added: 0x0000000001205800
+Event: 5744.131 Executing VM operation: BulkRevokeBias
+Event: 5744.132 Executing VM operation: BulkRevokeBias done
+Event: 5744.132 Thread 0x00000000010d5000 Thread exited: 0x00000000010d5000
+Event: 5747.039 loading class sun/misc/Signal$1
+Event: 5747.527 loading class sun/misc/Signal$1 done
+Event: 5747.527 Thread 0x00007ffab001a800 Thread added: 0x00007ffab001a800
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:01 16252982                           /usr/lib/jvm/java-8-oracle/bin/java
+00600000-00601000 rw-p 00000000 08:01 16252982                           /usr/lib/jvm/java-8-oracle/bin/java
+00c49000-01c72000 rw-p 00000000 00:00 0                                  [heap]
+b0000000-b5550000 rw-p 00000000 00:00 0 
+b5550000-c4cc0000 ---p 00000000 00:00 0 
+c4cc0000-eb566000 rw-p 00000000 00:00 0 
+eb566000-100000000 ---p 00000000 00:00 0 
+100000000-101b9e000 rw-p 00000000 00:00 0 
+101b9e000-140000000 ---p 00000000 00:00 0 
+7ffa43e7a000-7ffa43e7d000 ---p 00000000 00:00 0 
+7ffa43e7d000-7ffa43f7b000 rw-p 00000000 00:00 0                          [stack:8308]
+7ffa43f7b000-7ffa43f7e000 ---p 00000000 00:00 0 
+7ffa43f7e000-7ffa440fc000 rw-p 00000000 00:00 0                          [stack:8340]
+7ffa440fc000-7ffa4427c000 ---p 00000000 00:00 0 
+7ffa443d4000-7ffa445d4000 rw-p 00000000 00:00 0 
+7ffa445d4000-7ffa447d4000 rw-p 00000000 00:00 0 
+7ffa447d4000-7ffa447d7000 ---p 00000000 00:00 0 
+7ffa447d7000-7ffa448d5000 rw-p 00000000 00:00 0                          [stack:6185]
+7ffa448d5000-7ffa448d8000 ---p 00000000 00:00 0 
+7ffa448d8000-7ffa44bd6000 rw-p 00000000 00:00 0                          [stack:6592]
+7ffa44e11000-7ffa45011000 rw-p 00000000 00:00 0 
+7ffa45011000-7ffa45211000 rw-p 00000000 00:00 0 
+7ffa45211000-7ffa45411000 rw-p 00000000 00:00 0 
+7ffa45611000-7ffa45811000 rw-p 00000000 00:00 0 
+7ffa45a11000-7ffa45c11000 rw-p 00000000 00:00 0 
+7ffa45c11000-7ffa45e11000 rw-p 00000000 00:00 0 
+7ffa45e11000-7ffa46011000 rw-p 00000000 00:00 0 
+7ffa4604c000-7ffa4644c000 rw-p 00000000 00:00 0 
+7ffa4644c000-7ffa4664c000 rw-p 00000000 00:00 0 
+7ffa4674b000-7ffa4674e000 ---p 00000000 00:00 0 
+7ffa4674e000-7ffa46a4c000 rw-p 00000000 00:00 0                          [stack:8342]
+7ffa46a4c000-7ffa46c4c000 rw-p 00000000 00:00 0 
+7ffa46c4c000-7ffa46e4c000 rw-p 00000000 00:00 0 
+7ffa46f2f000-7ffa47087000 rw-s 00000000 00:04 20643860                   /SYSV00000000 (deleted)
+7ffa47087000-7ffa47287000 rw-p 00000000 00:00 0 
+7ffa47287000-7ffa4728a000 ---p 00000000 00:00 0 
+7ffa4728a000-7ffa47388000 rw-p 00000000 00:00 0                          [stack:3665]
+7ffa47388000-7ffa4738b000 ---p 00000000 00:00 0 
+7ffa4738b000-7ffa47489000 rw-p 00000000 00:00 0                          [stack:4173]
+7ffa47489000-7ffa4748c000 ---p 00000000 00:00 0 
+7ffa4748c000-7ffa4758a000 rw-p 00000000 00:00 0                          [stack:4824]
+7ffa475c5000-7ffa477c5000 rw-p 00000000 00:00 0 
+7ffa477c5000-7ffa479c5000 rw-p 00000000 00:00 0 
+7ffa479c5000-7ffa47bc5000 rw-p 00000000 00:00 0 
+7ffa47bc5000-7ffa47c00000 r-xp 00000000 08:01 16255837                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libjpeg.so
+7ffa47c00000-7ffa47dff000 ---p 0003b000 08:01 16255837                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libjpeg.so
+7ffa47dff000-7ffa47e00000 rw-p 0003a000 08:01 16255837                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libjpeg.so
+7ffa47e00000-7ffa48000000 rw-p 00000000 00:00 0 
+7ffa48000000-7ffa48fc1000 rw-p 00000000 00:00 0 
+7ffa48fc1000-7ffa4c000000 ---p 00000000 00:00 0 
+7ffa4c04a000-7ffa4c04d000 ---p 00000000 00:00 0 
+7ffa4c04d000-7ffa4c14b000 rw-p 00000000 00:00 0                          [stack:4806]
+7ffa4c14b000-7ffa4c14e000 ---p 00000000 00:00 0 
+7ffa4c14e000-7ffa4c24c000 rw-p 00000000 00:00 0                          [stack:3660]
+7ffa4c24c000-7ffa4c24f000 ---p 00000000 00:00 0 
+7ffa4c24f000-7ffa4c54d000 rw-p 00000000 00:00 0                          [stack:3659]
+7ffa4c54d000-7ffa4c74d000 rw-p 00000000 00:00 0 
+7ffa4c788000-7ffa4c988000 rw-p 00000000 00:00 0 
+7ffa4c988000-7ffa4cb88000 rw-p 00000000 00:00 0 
+7ffa4cb88000-7ffa4cd88000 rw-p 00000000 00:00 0 
+7ffa4cd88000-7ffa4cf88000 rw-p 00000000 00:00 0 
+7ffa4cf88000-7ffa4d09c000 r--s 01729000 08:01 9966878                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/Android/Sdk/platforms/android-23/data/layoutlib.jar
+7ffa4d09c000-7ffa4d29c000 rw-p 00000000 00:00 0 
+7ffa4d29c000-7ffa4d29f000 ---p 00000000 00:00 0 
+7ffa4d29f000-7ffa4d59d000 rw-p 00000000 00:00 0                          [stack:6538]
+7ffa4d665000-7ffa4d865000 rw-p 00000000 00:00 0 
+7ffa4d865000-7ffa4da65000 rw-p 00000000 00:00 0 
+7ffa4da65000-7ffa4dc65000 rw-p 00000000 00:00 0 
+7ffa4dc65000-7ffa4de65000 rw-p 00000000 00:00 0 
+7ffa4de65000-7ffa4de6b000 r-xp 00000000 08:01 12329113                   /usr/lib/x86_64-linux-gnu/libnotify.so.4.0.0
+7ffa4de6b000-7ffa4e06b000 ---p 00006000 08:01 12329113                   /usr/lib/x86_64-linux-gnu/libnotify.so.4.0.0
+7ffa4e06b000-7ffa4e06c000 r--p 00006000 08:01 12329113                   /usr/lib/x86_64-linux-gnu/libnotify.so.4.0.0
+7ffa4e06c000-7ffa4e06d000 rw-p 00007000 08:01 12329113                   /usr/lib/x86_64-linux-gnu/libnotify.so.4.0.0
+7ffa4e06d000-7ffa4e074000 r--s 00000000 08:01 12725185                   /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7ffa4e074000-7ffa4e274000 rw-p 00000000 00:00 0 
+7ffa4e274000-7ffa4e276000 r--s 00009000 08:01 9978874                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/hamcrest-core-1.3.jar
+7ffa4e276000-7ffa4e27c000 r--s 00033000 08:01 9978868                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/snakeyaml-1.6.jar
+7ffa4e27c000-7ffa4e27e000 r--s 00006000 08:01 9978867                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/jcommander-1.12.jar
+7ffa4e27e000-7ffa4e283000 r--s 00040000 08:01 9978866                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/bsh-2.0b4.jar
+7ffa4e283000-7ffa4e28c000 r--s 00089000 08:01 9978825                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/testng-6.3.1.jar
+7ffa4e28c000-7ffa4e294000 r--s 00045000 08:01 9978824                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/junit-4.12.jar
+7ffa4e294000-7ffa4e295000 r--s 00002000 08:01 9978818                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/sonar-batch-bootstrapper-2.9.jar
+7ffa4e295000-7ffa4e29c000 r--s 00038000 08:01 9978819                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/bcpg-jdk15on-1.51.jar
+7ffa4e29c000-7ffa4e2ac000 r--s 00088000 08:01 9978835                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/joda-time-2.8.2.jar
+7ffa4e2ac000-7ffa4e2bd000 r--s 000cf000 08:01 9978834                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/jackson-databind-2.3.2.jar
+7ffa4e2bd000-7ffa4e2bf000 r--s 00007000 08:01 9978833                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/jackson-annotations-2.3.2.jar
+7ffa4e2bf000-7ffa4e2c2000 r--s 0002e000 08:01 9978832                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/jackson-core-2.3.2.jar
+7ffa4e2c2000-7ffa4e2cd000 r--s 0006b000 08:01 9978831                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/aws-java-sdk-core-1.9.19.jar
+7ffa4e2cd000-7ffa4e2d3000 r--s 00036000 08:01 9978830                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/aws-java-sdk-kms-1.9.19.jar
+7ffa4e2d3000-7ffa4e2de000 r--s 00079000 08:01 9978829                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/aws-java-sdk-s3-1.9.19.jar
+7ffa4e2de000-7ffa4e2e0000 r--s 00005000 08:01 9978823                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/jatl-0.2.2.jar
+7ffa4e2e0000-7ffa4e2e2000 r--s 00009000 08:01 9978805                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/commons-cli-1.2.jar
+7ffa4e2e2000-7ffa4e303000 r--s 001c3000 08:01 9978813                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/bndlib-2.4.0.jar
+7ffa4e303000-7ffa4e306000 r--s 0000c000 08:01 9978816                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/pmaven-groovy-0.8-20100325.jar
+7ffa4e306000-7ffa4e307000 r--s 00004000 08:01 9978815                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/pmaven-common-0.8-20100325.jar
+7ffa4e307000-7ffa4e30a000 r--s 0001e000 08:01 9978841                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/jsp-api-2.1-6.1.14.jar
+7ffa4e30a000-7ffa4e32d000 r--s 00344000 08:01 9978840                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/core-3.1.1.jar
+7ffa4e32d000-7ffa4e32e000 r--s 00006000 08:01 9978839                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/jetty-naming-6.1.25.jar
+7ffa4e32e000-7ffa4e32f000 r--s 00002000 08:01 9978812                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/geronimo-annotation_1.0_spec-1.0.jar
+7ffa4e32f000-7ffa4e331000 r--s 00002000 08:01 9978811                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/jetty-annotations-6.1.25.jar
+7ffa4e331000-7ffa4e342000 r--s 000ea000 08:01 9978810                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/jsp-2.1-6.1.14.jar
+7ffa4e342000-7ffa4e344000 r--s 0000d000 08:01 9978809                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/jetty-plus-6.1.25.jar
+7ffa4e344000-7ffa4e346000 r--s 0001f000 08:01 9978808                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/servlet-api-2.5-20081211.jar
+7ffa4e346000-7ffa4e34a000 r--s 00028000 08:01 9978807                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/jetty-util-6.1.25.jar
+7ffa4e34a000-7ffa4e351000 r--s 0007d000 08:01 9978806                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/jetty-6.1.25.jar
+7ffa4e351000-7ffa4e358000 r--s 00035000 08:01 9978822                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/simple-4.1.21.jar
+7ffa4e358000-7ffa4e364000 r--s 00100000 08:01 9978820                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/rhino-1.7R3.jar
+7ffa4e364000-7ffa4e37c000 r--s 00115000 08:01 9978871                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/xercesImpl-2.9.1.jar
+7ffa4e37c000-7ffa4e384000 r--s 00028000 08:01 9978872                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/xml-apis-1.3.04.jar
+7ffa4e384000-7ffa4e38a000 r--s 0005b000 08:01 9978870                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/jcifs-1.3.17.jar
+7ffa4e38a000-7ffa4e391000 r--s 00049000 08:01 9978869                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/httpcore-4.4.4.jar
+7ffa4e391000-7ffa4e397000 r--s 00033000 08:01 9978817                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/commons-codec-1.6.jar
+7ffa4e397000-7ffa4e39a000 r--s 0001c000 08:01 9978827                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/nekohtml-1.9.14.jar
+7ffa4e39a000-7ffa4e3a7000 r--s 000a4000 08:01 9978826                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/httpclient-4.4.1.jar
+7ffa4e3a7000-7ffa4e3a8000 r--s 00007000 08:01 9978865                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/wagon-http-shared4-2.4.jar
+7ffa4e3a8000-7ffa4e3ac000 r--s 00033000 08:01 9978864                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/plexus-utils-2.0.6.jar
+7ffa4e3ac000-7ffa4e3b0000 r--s 00021000 08:01 9978863                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/maven-model-builder-3.0.4.jar
+7ffa4e3b0000-7ffa4e3b1000 r--s 00002000 08:01 9978862                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/wagon-file-2.4.jar
+7ffa4e3b1000-7ffa4e3b3000 r--s 00002000 08:01 9978861                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/plexus-cipher-1.7.jar
+7ffa4e3b3000-7ffa4e3f3000 r--s 00277000 08:01 9978838                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/bcprov-jdk15on-1.51.jar
+7ffa4e3f3000-7ffa4e5f3000 rw-p 00000000 00:00 0 
+7ffa4e5f3000-7ffa4e6d9000 r-xp 00000000 08:01 12321016                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7ffa4e6d9000-7ffa4e8d8000 ---p 000e6000 08:01 12321016                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7ffa4e8d8000-7ffa4e8e0000 r--p 000e5000 08:01 12321016                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7ffa4e8e0000-7ffa4e8e2000 rw-p 000ed000 08:01 12321016                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7ffa4e8e2000-7ffa4e8f7000 rw-p 00000000 00:00 0 
+7ffa4e8f7000-7ffa4e8fb000 r-xp 00000000 08:01 10096848                   /home/hacker-machine/.gradle/native/19/linux-amd64/libnative-platform.so
+7ffa4e8fb000-7ffa4eafa000 ---p 00004000 08:01 10096848                   /home/hacker-machine/.gradle/native/19/linux-amd64/libnative-platform.so
+7ffa4eafa000-7ffa4eafb000 rw-p 00003000 08:01 10096848                   /home/hacker-machine/.gradle/native/19/linux-amd64/libnative-platform.so
+7ffa4eafb000-7ffa4eafe000 ---p 00000000 00:00 0 
+7ffa4eafe000-7ffa4ebfc000 rw-p 00000000 00:00 0                          [stack:3632]
+7ffa4ebfc000-7ffa4ebff000 ---p 00000000 00:00 0 
+7ffa4ebff000-7ffa4eefd000 rw-p 00000000 00:00 0                          [stack:8338]
+7ffa4eefd000-7ffa4ef00000 ---p 00000000 00:00 0 
+7ffa4ef00000-7ffa4f1fe000 rw-p 00000000 00:00 0                          [stack:3658]
+7ffa4f1fe000-7ffa4f201000 ---p 00000000 00:00 0 
+7ffa4f201000-7ffa4f4ff000 rw-p 00000000 00:00 0                          [stack:3656]
+7ffa4f4ff000-7ffa4f502000 ---p 00000000 00:00 0 
+7ffa4f502000-7ffa4f800000 rw-p 00000000 00:00 0                          [stack:3554]
+7ffa4f800000-7ffa4fa00000 rw-p 00000000 00:00 0 
+7ffa4fa00000-7ffa4fc00000 rw-p 00000000 00:00 0 
+7ffa4fc00000-7ffa4fe00000 rw-p 00000000 00:00 0 
+7ffa4fe00000-7ffa50000000 rw-p 00000000 00:00 0 
+7ffa50000000-7ffa50021000 rw-p 00000000 00:00 0 
+7ffa50021000-7ffa54000000 ---p 00000000 00:00 0 
+7ffa54000000-7ffa54003000 r--s 00013000 08:01 9978860                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/aether-api-1.13.1.jar
+7ffa54003000-7ffa54005000 r--s 0000a000 08:01 9978859                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/maven-settings-3.0.4.jar
+7ffa54005000-7ffa54007000 r--s 0000d000 08:01 9978858                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/plexus-interpolation-1.14.jar
+7ffa54007000-7ffa54009000 r--s 0000b000 08:01 9978857                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/maven-artifact-3.0.4.jar
+7ffa54009000-7ffa54010000 r--s 0002e000 08:01 9978856                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/plexus-container-default-1.5.5.jar
+7ffa54010000-7ffa54012000 r--s 0000b000 08:01 9978855                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/maven-plugin-api-3.0.4.jar
+7ffa54012000-7ffa54014000 r--s 00000000 08:01 9978873                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/plexus-component-annotations-1.5.5.jar
+7ffa54014000-7ffa5401a000 r--s 0003f000 08:01 9978854                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/maven-compat-3.0.4.jar
+7ffa5401a000-7ffa5401d000 r--s 00008000 08:01 9978853                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/maven-settings-builder-3.0.4.jar
+7ffa5401d000-7ffa5401e000 r--s 00002000 08:01 9978852                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/wagon-http-2.4.jar
+7ffa5401e000-7ffa54020000 r--s 00026000 08:01 9978851                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/maven-model-3.0.4.jar
+7ffa54020000-7ffa54022000 r--s 00006000 08:01 9978850                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/aether-connector-wagon-1.13.1.jar
+7ffa54022000-7ffa54024000 r--s 0000a000 08:01 9978849                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/plexus-classworlds-2.4.jar
+7ffa54024000-7ffa54026000 r--s 00006000 08:01 9978848                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/maven-repository-metadata-3.0.4.jar
+7ffa54026000-7ffa54028000 r--s 0000c000 08:01 9978847                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/maven-aether-provider-3.0.4.jar
+7ffa54028000-7ffa5402a000 r--s 0000b000 08:01 9978846                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/wagon-provider-api-2.4.jar
+7ffa5402a000-7ffa5402b000 r--s 00003000 08:01 9978845                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/aether-spi-1.13.1.jar
+7ffa5402b000-7ffa5402f000 r--s 0001c000 08:01 9978844                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/aether-util-1.13.1.jar
+7ffa5402f000-7ffa54032000 r--s 0001d000 08:01 9978843                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/aether-impl-1.13.1.jar
+7ffa54032000-7ffa54033000 r--s 00006000 08:01 9978842                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/plexus-sec-dispatcher-1.3.jar
+7ffa54033000-7ffa54038000 r--s 00040000 08:01 9978828                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/jsch-0.1.53.jar
+7ffa54038000-7ffa5403c000 r--s 0001d000 08:01 9978837                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/xbean-reflect-3.4.jar
+7ffa5403c000-7ffa54048000 r--s 0007d000 08:01 9978814                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/maven-core-3.0.4.jar
+7ffa54048000-7ffa5404d000 r--s 0002a000 08:01 9978821                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gson-2.2.4.jar
+7ffa54075000-7ffa54076000 r--s 00003000 08:01 9978754                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/native-platform-linux-amd64-0.10.jar
+7ffa54076000-7ffa54077000 r--s 00002000 08:01 9978752                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/native-platform-osx-i386-0.10.jar
+7ffa54077000-7ffa54079000 r--s 00008000 08:01 9978746                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/jansi-1.2.1.jar
+7ffa54079000-7ffa540a1000 r--s 001cf000 08:01 9978724                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/guava-jdk5-17.0.jar
+7ffa540a1000-7ffa540a4000 ---p 00000000 00:00 0 
+7ffa540a4000-7ffa541a2000 rw-p 00000000 00:00 0                          [stack:3434]
+7ffa541a2000-7ffa541a5000 ---p 00000000 00:00 0 
+7ffa541a5000-7ffa544a3000 rw-p 00000000 00:00 0                          [stack:3459]
+7ffa544a3000-7ffa546a3000 rw-p 00000000 00:00 0 
+7ffa546a3000-7ffa546a6000 ---p 00000000 00:00 0 
+7ffa546a6000-7ffa547a4000 rw-p 00000000 00:00 0                          [stack:3397]
+7ffa547a4000-7ffa548bf000 r--s 017d8000 08:01 14157801                   /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/Android/Sdk/platforms/android-N/data/layoutlib.jar
+7ffa548bf000-7ffa54abf000 rw-p 00000000 00:00 0 
+7ffa54abf000-7ffa54ac2000 ---p 00000000 00:00 0 
+7ffa54ac2000-7ffa54bc0000 rw-p 00000000 00:00 0                          [stack:3657]
+7ffa54bc0000-7ffa54bc3000 ---p 00000000 00:00 0 
+7ffa54bc3000-7ffa54cc1000 rw-p 00000000 00:00 0                          [stack:8309]
+7ffa54cc1000-7ffa54cc4000 ---p 00000000 00:00 0 
+7ffa54cc4000-7ffa54dc2000 rw-p 00000000 00:00 0                          [stack:5487]
+7ffa54dc2000-7ffa54dc5000 ---p 00000000 00:00 0 
+7ffa54dc5000-7ffa550c3000 rw-p 00000000 00:00 0                          [stack:8310]
+7ffa550c3000-7ffa550c6000 ---p 00000000 00:00 0 
+7ffa550c6000-7ffa553c4000 rw-p 00000000 00:00 0                          [stack:3540]
+7ffa553c4000-7ffa555c4000 rw-p 00000000 00:00 0 
+7ffa555c4000-7ffa557c4000 rw-p 00000000 00:00 0 
+7ffa557c4000-7ffa557c7000 ---p 00000000 00:00 0 
+7ffa557c7000-7ffa55ac5000 rw-p 00000000 00:00 0                          [stack:3355]
+7ffa55ac5000-7ffa55cc5000 rw-p 00000000 00:00 0 
+7ffa55cc5000-7ffa55cc8000 ---p 00000000 00:00 0 
+7ffa55cc8000-7ffa55fc6000 rw-p 00000000 00:00 0                          [stack:8339]
+7ffa55fc6000-7ffa561b9000 rw-p 00000000 00:00 0 
+7ffa561b9000-7ffa561c6000 ---p 00000000 00:00 0 
+7ffa561c6000-7ffa563c6000 rw-p 00000000 00:00 0 
+7ffa563c6000-7ffa565c6000 rw-p 00000000 00:00 0 
+7ffa565c6000-7ffa567c6000 rw-p 00000000 00:00 0 
+7ffa567c6000-7ffa569c6000 rw-p 00000000 00:00 0 
+7ffa569c6000-7ffa56bc6000 rw-p 00000000 00:00 0 
+7ffa56bc6000-7ffa56bf0000 r-xp 00000000 08:01 16254974                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libdcpr.so
+7ffa56bf0000-7ffa56df0000 ---p 0002a000 08:01 16254974                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libdcpr.so
+7ffa56df0000-7ffa56df3000 rw-p 0002a000 08:01 16254974                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libdcpr.so
+7ffa56df3000-7ffa56df6000 ---p 00000000 00:00 0 
+7ffa56df6000-7ffa570f4000 rw-p 00000000 00:00 0                          [stack:3351]
+7ffa570f4000-7ffa570f7000 ---p 00000000 00:00 0 
+7ffa570f7000-7ffa573f5000 rw-p 00000000 00:00 0                          [stack:3350]
+7ffa573f5000-7ffa573f8000 ---p 00000000 00:00 0 
+7ffa573f8000-7ffa574f6000 rw-p 00000000 00:00 0                          [stack:8307]
+7ffa574f6000-7ffa574fb000 r-xp 00000000 08:01 8522885                    /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+7ffa574fb000-7ffa576fa000 ---p 00005000 08:01 8522885                    /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+7ffa576fa000-7ffa576fb000 r--p 00004000 08:01 8522885                    /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+7ffa576fb000-7ffa576fc000 rw-p 00005000 08:01 8522885                    /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+7ffa576fc000-7ffa576fe000 r-xp 00000000 08:01 8523702                    /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+7ffa576fe000-7ffa578fd000 ---p 00002000 08:01 8523702                    /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+7ffa578fd000-7ffa578fe000 r--p 00001000 08:01 8523702                    /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+7ffa578fe000-7ffa578ff000 rw-p 00002000 08:01 8523702                    /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+7ffa578ff000-7ffa57aff000 rw-p 00000000 00:00 0 
+7ffa57aff000-7ffa57b02000 ---p 00000000 00:00 0 
+7ffa57b02000-7ffa57e00000 rw-p 00000000 00:00 0                          [stack:3347]
+7ffa57e00000-7ffa58000000 rw-p 00000000 00:00 0 
+7ffa58000000-7ffa5940d000 rw-p 00000000 00:00 0 
+7ffa5940d000-7ffa5c000000 ---p 00000000 00:00 0 
+7ffa5c000000-7ffa5c001000 r--s 00003000 08:01 9978758                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/native-platform-freebsd-i386-0.10.jar
+7ffa5c001000-7ffa5c003000 r--s 0000f000 08:01 9978760                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/reflectasm-1.07-shaded.jar
+7ffa5c003000-7ffa5c004000 r--s 00003000 08:01 9978755                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/native-platform-linux-i386-0.10.jar
+7ffa5c004000-7ffa5c009000 r--s 00038000 08:01 9978730                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/asm-all-5.1.jar
+7ffa5c009000-7ffa5c00d000 r--s 00026000 08:01 9978748                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/kryo-2.20.jar
+7ffa5c00d000-7ffa5c011000 r--s 00027000 08:01 9978733                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/commons-io-2.2.jar
+7ffa5c011000-7ffa5c013000 r--s 00003000 08:01 9978751                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/jcl-over-slf4j-1.7.10.jar
+7ffa5c013000-7ffa5c016000 ---p 00000000 00:00 0 
+7ffa5c016000-7ffa5c314000 rw-p 00000000 00:00 0                          [stack:8262]
+7ffa5c314000-7ffa5c514000 rw-p 00000000 00:00 0 
+7ffa5c514000-7ffa5c51a000 r--s 00032000 08:01 9978743                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/jaxen-1.1.jar
+7ffa5c51a000-7ffa5c51b000 r--s 00005000 08:01 9978750                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/log4j-over-slf4j-1.7.10.jar
+7ffa5c51b000-7ffa5c51c000 r--s 00005000 08:01 9978757                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/native-platform-windows-i386-0.10.jar
+7ffa5c51c000-7ffa5c51d000 r--s 00007000 08:01 9978723                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/slf4j-api-1.7.10.jar
+7ffa5c51d000-7ffa5c51e000 r--s 00005000 08:01 9978756                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/native-platform-windows-amd64-0.10.jar
+7ffa5c51e000-7ffa5c520000 r--s 00000000 08:01 9978749                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/jul-to-slf4j-1.7.10.jar
+7ffa5c520000-7ffa5c521000 r--s 00000000 08:01 9978734                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/jcip-annotations-1.0.jar
+7ffa5c521000-7ffa5c522000 r--s 00000000 08:01 9978735                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/javax.inject-1.jar
+7ffa5c522000-7ffa5c524000 r--s 00007000 08:01 9978762                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/objenesis-1.2.jar
+7ffa5c524000-7ffa5c525000 r--s 00002000 08:01 9978753                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/native-platform-osx-amd64-0.10.jar
+7ffa5c525000-7ffa5c529000 r--s 000e4000 08:01 9978744                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/jna-3.2.7.jar
+7ffa5c529000-7ffa5c52a000 r--s 00003000 08:01 9978759                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/native-platform-freebsd-amd64-0.10.jar
+7ffa5c52a000-7ffa5c52f000 r--s 00048000 08:01 9978742                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/dom4j-1.6.1.jar
+7ffa5c52f000-7ffa5c532000 r--s 0000d000 08:01 9978745                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/native-platform-0.10.jar
+7ffa5c532000-7ffa5c53f000 r--s 00083000 08:01 9978732                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/commons-collections-3.2.2.jar
+7ffa5c53f000-7ffa5c570000 r--s 00191000 08:01 7996217                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/plugins/gradle/lib/gradle-core-2.2.jar
+7ffa5c570000-7ffa5c761000 rw-p 00000000 00:00 0 
+7ffa5c761000-7ffa5c770000 ---p 00000000 00:00 0 
+7ffa5c770000-7ffa5c773000 ---p 00000000 00:00 0 
+7ffa5c773000-7ffa5c871000 rw-p 00000000 00:00 0                          [stack:8341]
+7ffa5c871000-7ffa5c874000 ---p 00000000 00:00 0 
+7ffa5c874000-7ffa5c972000 rw-p 00000000 00:00 0                          [stack:3320]
+7ffa5c972000-7ffa5c977000 r--s 00041000 08:01 9978725                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/commons-lang-2.6.jar
+7ffa5c977000-7ffa5c979000 r--s 00000000 08:01 9978761                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/minlog-1.2.jar
+7ffa5c982000-7ffa5cb82000 rw-p 00000000 00:00 0 
+7ffa5cb82000-7ffa5cd82000 rw-p 00000000 00:00 0 
+7ffa5cd82000-7ffa5cd85000 ---p 00000000 00:00 0 
+7ffa5cd85000-7ffa5ce83000 rw-p 00000000 00:00 0                          [stack:3319]
+7ffa5ce83000-7ffa5ce86000 ---p 00000000 00:00 0 
+7ffa5ce86000-7ffa5d184000 rw-p 00000000 00:00 0                          [stack:3312]
+7ffa5d19e000-7ffa5d1a1000 ---p 00000000 00:00 0 
+7ffa5d1a1000-7ffa5d1d7000 rw-p 00000000 00:00 0                          [stack:3543]
+7ffa5d1d7000-7ffa5d209000 r-xp 00000000 08:01 16254956                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libsunec.so
+7ffa5d209000-7ffa5d408000 ---p 00032000 08:01 16254956                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libsunec.so
+7ffa5d408000-7ffa5d40e000 rw-p 00031000 08:01 16254956                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libsunec.so
+7ffa5d40e000-7ffa5d61e000 rw-p 00000000 00:00 0 
+7ffa5d61e000-7ffa5d621000 r--s 0001a000 08:01 16253439                   /usr/lib/jvm/java-8-oracle/jre/lib/jce.jar
+7ffa5d621000-7ffa5d624000 ---p 00000000 00:00 0 
+7ffa5d624000-7ffa5d722000 rw-p 00000000 00:00 0                          [stack:3301]
+7ffa5d722000-7ffa5d725000 ---p 00000000 00:00 0 
+7ffa5d725000-7ffa5da23000 rw-p 00000000 00:00 0                          [stack:3300]
+7ffa5da23000-7ffa5da26000 ---p 00000000 00:00 0 
+7ffa5da26000-7ffa5db24000 rw-p 00000000 00:00 0                          [stack:3311]
+7ffa5db24000-7ffa5db27000 ---p 00000000 00:00 0 
+7ffa5db27000-7ffa5dc25000 rw-p 00000000 00:00 0                          [stack:3293]
+7ffa5dc25000-7ffa5dc28000 ---p 00000000 00:00 0 
+7ffa5dc28000-7ffa5dd26000 rw-p 00000000 00:00 0                          [stack:3292]
+7ffa5dd26000-7ffa5dd29000 ---p 00000000 00:00 0 
+7ffa5dd29000-7ffa5de27000 rw-p 00000000 00:00 0                          [stack:3291]
+7ffa5de27000-7ffa5de2a000 ---p 00000000 00:00 0 
+7ffa5de2a000-7ffa5f2a6000 rw-p 00000000 00:00 0                          [stack:3290]
+7ffa5f2b4000-7ffa5f2b7000 r--s 0002f000 08:01 7996274                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/plugins/android/lib/android-common.jar
+7ffa5f318000-7ffa5f31b000 ---p 00000000 00:00 0 
+7ffa5f31b000-7ffa5f419000 rw-p 00000000 00:00 0                          [stack:3353]
+7ffa5f419000-7ffa5f41c000 ---p 00000000 00:00 0 
+7ffa5f41c000-7ffa5f51a000 rw-p 00000000 00:00 0                          [stack:3344]
+7ffa5f51a000-7ffa5f522000 r--s 000aa000 08:01 8785359                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/lib/jps-model.jar
+7ffa5f523000-7ffa5f524000 r--s 00009000 08:01 16254863                   /usr/lib/jvm/java-8-oracle/jre/lib/ext/sunec.jar
+7ffa5f5bb000-7ffa5f5bf000 r--s 0003a000 08:01 16254860                   /usr/lib/jvm/java-8-oracle/jre/lib/ext/sunpkcs11.jar
+7ffa5f639000-7ffa5f6b2000 r--s 00c12000 08:01 8127248                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/plugins/Groovy/lib/Groovy.jar
+7ffa5f6b2000-7ffa5fb1a000 r--s 08189000 08:01 8785517                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/lib/idea.jar
+7ffa5fb80000-7ffa5fd7f000 rw-p 00000000 00:00 0 
+7ffa5fd7f000-7ffa5fd80000 ---p 00000000 00:00 0 
+7ffa5fd80000-7ffa5fde9000 r-xp 00000000 08:01 16254955                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libt2k.so
+7ffa5fde9000-7ffa5ffe9000 ---p 00069000 08:01 16254955                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libt2k.so
+7ffa5ffe9000-7ffa5fff0000 rw-p 00069000 08:01 16254955                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libt2k.so
+7ffa5fff0000-7ffa60000000 rw-p 00000000 00:00 0 
+7ffa60000000-7ffa63ff7000 rw-p 00000000 00:00 0 
+7ffa63ff7000-7ffa64000000 ---p 00000000 00:00 0 
+7ffa64000000-7ffa648c1000 rw-p 00000000 00:00 0 
+7ffa648c1000-7ffa68000000 ---p 00000000 00:00 0 
+7ffa68000000-7ffa6807e000 rw-p 00000000 00:00 0 
+7ffa6807e000-7ffa6c000000 ---p 00000000 00:00 0 
+7ffa6c000000-7ffa6c962000 rw-p 00000000 00:00 0 
+7ffa6c962000-7ffa70000000 ---p 00000000 00:00 0 
+7ffa70000000-7ffa70c10000 rw-p 00000000 00:00 0 
+7ffa70c10000-7ffa74000000 ---p 00000000 00:00 0 
+7ffa74000000-7ffa7426d000 rw-p 00000000 00:00 0 
+7ffa7426d000-7ffa78000000 ---p 00000000 00:00 0 
+7ffa78000000-7ffa7897d000 rw-p 00000000 00:00 0 
+7ffa7897d000-7ffa7c000000 ---p 00000000 00:00 0 
+7ffa7c000000-7ffa7d084000 rw-p 00000000 00:00 0 
+7ffa7d084000-7ffa80000000 ---p 00000000 00:00 0 
+7ffa80000000-7ffa80021000 rw-p 00000000 00:00 0 
+7ffa80021000-7ffa84000000 ---p 00000000 00:00 0 
+7ffa84000000-7ffa84b4d000 rw-p 00000000 00:00 0 
+7ffa84b4d000-7ffa88000000 ---p 00000000 00:00 0 
+7ffa88012000-7ffa88015000 ---p 00000000 00:00 0 
+7ffa88015000-7ffa8804b000 rw-p 00000000 00:00 0 
+7ffa8804b000-7ffa88051000 r--s 00033000 08:01 9978763                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-plugins-2.14.1.jar
+7ffa88051000-7ffa88053000 r--s 0000f000 08:01 9978778                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-reporting-2.14.1.jar
+7ffa88053000-7ffa88054000 r--s 00008000 08:01 9978774                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-ear-2.14.1.jar
+7ffa88054000-7ffa88057000 r--s 00015000 08:01 9978772                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-sonar-2.14.1.jar
+7ffa88057000-7ffa8805d000 r--s 0002a000 08:01 9978790                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-platform-play-2.14.1.jar
+7ffa8805d000-7ffa88063000 r--s 00032000 08:01 9978777                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-diagnostics-2.14.1.jar
+7ffa88063000-7ffa88069000 r--s 00024000 08:01 9978786                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-language-java-2.14.1.jar
+7ffa88069000-7ffa8806b000 r--s 0000a000 08:01 9978799                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-resources-http-2.14.1.jar
+7ffa8806b000-7ffa88078000 r--s 0004d000 08:01 9978789                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-platform-native-2.14.1.jar
+7ffa88078000-7ffa88087000 r--s 000d9000 08:01 9978836                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/ivy-2.2.0.jar
+7ffa88087000-7ffa88089000 r--s 00007000 08:01 9978802                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-tooling-api-builders-2.14.1.jar
+7ffa88089000-7ffa88094000 r--s 00066000 08:01 9978769                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-ide-2.14.1.jar
+7ffa88094000-7ffa88098000 r--s 00014000 08:01 9978798                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-plugin-use-2.14.1.jar
+7ffa88098000-7ffa8809a000 r--s 00003000 08:01 9978767                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-osgi-2.14.1.jar
+7ffa8809a000-7ffa8809c000 r--s 00002000 08:01 9978779                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-publish-2.14.1.jar
+7ffa8809c000-7ffa8809e000 r--s 0000c000 08:01 9978781                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-jacoco-2.14.1.jar
+7ffa8809e000-7ffa880a0000 r--s 0000a000 08:01 9978788                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-language-scala-2.14.1.jar
+7ffa880a0000-7ffa880a2000 r--s 00007000 08:01 9978797                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-plugin-development-2.14.1.jar
+7ffa880a2000-7ffa880a3000 r--s 00004000 08:01 9978800                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-resources-sftp-2.14.1.jar
+7ffa880a3000-7ffa880a7000 r--s 0001f000 08:01 9978782                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-build-init-2.14.1.jar
+7ffa880a7000-7ffa880ae000 r--s 00029000 08:01 9978783                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-platform-base-2.14.1.jar
+7ffa880ae000-7ffa880b4000 r--s 0002e000 08:01 9978796                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-testing-jvm-2.14.1.jar
+7ffa880b4000-7ffa880b7000 ---p 00000000 00:00 0 
+7ffa880b7000-7ffa881b5000 rw-p 00000000 00:00 0                          [stack:5741]
+7ffa881b5000-7ffa881b8000 ---p 00000000 00:00 0 
+7ffa881b8000-7ffa882b6000 rw-p 00000000 00:00 0                          [stack:3094]
+7ffa882b6000-7ffa88317000 r-xp 00000000 08:01 16254992                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libsplashscreen.so
+7ffa88317000-7ffa88517000 ---p 00061000 08:01 16254992                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libsplashscreen.so
+7ffa88517000-7ffa88518000 rw-p 00061000 08:01 16254992                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libsplashscreen.so
+7ffa88518000-7ffa8871b000 rw-p 00000000 00:00 0 
+7ffa8871b000-7ffa8871e000 ---p 00000000 00:00 0 
+7ffa8871e000-7ffa8881c000 rw-p 00000000 00:00 0                          [stack:3027]
+7ffa8881c000-7ffa8881f000 ---p 00000000 00:00 0 
+7ffa8881f000-7ffa8891d000 rw-p 00000000 00:00 0                          [stack:3026]
+7ffa8891d000-7ffa88920000 ---p 00000000 00:00 0 
+7ffa88920000-7ffa88c1e000 rw-p 00000000 00:00 0                          [stack:3288]
+7ffa88c1e000-7ffa88c34000 r-xp 00000000 08:01 8000834                    /home/hacker-machine/.AndroidStudio1.5/system/tmp/jna/jna7576431465543509215.tmp (deleted)
+7ffa88c34000-7ffa88d33000 ---p 00016000 08:01 8000834                    /home/hacker-machine/.AndroidStudio1.5/system/tmp/jna/jna7576431465543509215.tmp (deleted)
+7ffa88d33000-7ffa88d35000 rw-p 00015000 08:01 8000834                    /home/hacker-machine/.AndroidStudio1.5/system/tmp/jna/jna7576431465543509215.tmp (deleted)
+7ffa88d35000-7ffa88d3e000 r-xp 00000000 08:01 16255839                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libmanagement.so
+7ffa88d3e000-7ffa88f3d000 ---p 00009000 08:01 16255839                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libmanagement.so
+7ffa88f3d000-7ffa88f3e000 rw-p 00008000 08:01 16255839                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libmanagement.so
+7ffa88f3e000-7ffa88f41000 ---p 00000000 00:00 0 
+7ffa88f41000-7ffa8903f000 rw-p 00000000 00:00 0                          [stack:3020]
+7ffa8903f000-7ffa89042000 ---p 00000000 00:00 0 
+7ffa89042000-7ffa89278000 rw-p 00000000 00:00 0                          [stack:3019]
+7ffa89278000-7ffa8927b000 ---p 00000000 00:00 0 
+7ffa8927b000-7ffa89379000 rw-p 00000000 00:00 0                          [stack:3028]
+7ffa89379000-7ffa8937a000 ---p 00000000 00:00 0 
+7ffa8937a000-7ffa89b7a000 rw-p 00000000 00:00 0 
+7ffa89b7a000-7ffa89b7b000 ---p 00000000 00:00 0 
+7ffa89b7b000-7ffa8a37b000 rw-p 00000000 00:00 0 
+7ffa8a37b000-7ffa8a37c000 ---p 00000000 00:00 0 
+7ffa8a37c000-7ffa8ab7c000 rw-p 00000000 00:00 0                          [stack:3013]
+7ffa8ab7c000-7ffa8abc0000 r-xp 00000000 08:01 8520644                    /lib/x86_64-linux-gnu/libdbus-1.so.3.7.6
+7ffa8abc0000-7ffa8adbf000 ---p 00044000 08:01 8520644                    /lib/x86_64-linux-gnu/libdbus-1.so.3.7.6
+7ffa8adbf000-7ffa8adc0000 r--p 00043000 08:01 8520644                    /lib/x86_64-linux-gnu/libdbus-1.so.3.7.6
+7ffa8adc0000-7ffa8adc1000 rw-p 00044000 08:01 8520644                    /lib/x86_64-linux-gnu/libdbus-1.so.3.7.6
+7ffa8adc1000-7ffa8adc9000 r-xp 00000000 08:01 8523683                    /lib/x86_64-linux-gnu/libnih-dbus.so.1.0.0
+7ffa8adc9000-7ffa8afc9000 ---p 00008000 08:01 8523683                    /lib/x86_64-linux-gnu/libnih-dbus.so.1.0.0
+7ffa8afc9000-7ffa8afca000 r--p 00008000 08:01 8523683                    /lib/x86_64-linux-gnu/libnih-dbus.so.1.0.0
+7ffa8afca000-7ffa8afcb000 rw-p 00009000 08:01 8523683                    /lib/x86_64-linux-gnu/libnih-dbus.so.1.0.0
+7ffa8afcb000-7ffa8afe2000 r-xp 00000000 08:01 8523685                    /lib/x86_64-linux-gnu/libnih.so.1.0.0
+7ffa8afe2000-7ffa8b1e1000 ---p 00017000 08:01 8523685                    /lib/x86_64-linux-gnu/libnih.so.1.0.0
+7ffa8b1e1000-7ffa8b1e2000 r--p 00016000 08:01 8523685                    /lib/x86_64-linux-gnu/libnih.so.1.0.0
+7ffa8b1e2000-7ffa8b1e3000 rw-p 00017000 08:01 8523685                    /lib/x86_64-linux-gnu/libnih.so.1.0.0
+7ffa8b1e3000-7ffa8b1fc000 r-xp 00000000 08:01 8523628                    /lib/x86_64-linux-gnu/libcgmanager.so.0.0.0
+7ffa8b1fc000-7ffa8b3fb000 ---p 00019000 08:01 8523628                    /lib/x86_64-linux-gnu/libcgmanager.so.0.0.0
+7ffa8b3fb000-7ffa8b3fd000 r--p 00018000 08:01 8523628                    /lib/x86_64-linux-gnu/libcgmanager.so.0.0.0
+7ffa8b3fd000-7ffa8b3fe000 rw-p 0001a000 08:01 8523628                    /lib/x86_64-linux-gnu/libcgmanager.so.0.0.0
+7ffa8b3fe000-7ffa8b40e000 r-xp 00000000 08:01 8524698                    /lib/x86_64-linux-gnu/libudev.so.1.3.5
+7ffa8b40e000-7ffa8b60d000 ---p 00010000 08:01 8524698                    /lib/x86_64-linux-gnu/libudev.so.1.3.5
+7ffa8b60d000-7ffa8b60e000 r--p 0000f000 08:01 8524698                    /lib/x86_64-linux-gnu/libudev.so.1.3.5
+7ffa8b60e000-7ffa8b60f000 rw-p 00010000 08:01 8524698                    /lib/x86_64-linux-gnu/libudev.so.1.3.5
+7ffa8b60f000-7ffa8b643000 r-xp 00000000 08:01 12715193                   /usr/lib/x86_64-linux-gnu/gvfs/libgvfscommon.so
+7ffa8b643000-7ffa8b843000 ---p 00034000 08:01 12715193                   /usr/lib/x86_64-linux-gnu/gvfs/libgvfscommon.so
+7ffa8b843000-7ffa8b848000 r--p 00034000 08:01 12715193                   /usr/lib/x86_64-linux-gnu/gvfs/libgvfscommon.so
+7ffa8b848000-7ffa8b849000 rw-p 00039000 08:01 12715193                   /usr/lib/x86_64-linux-gnu/gvfs/libgvfscommon.so
+7ffa8b849000-7ffa8b878000 r-xp 00000000 08:01 12715194                   /usr/lib/x86_64-linux-gnu/gio/modules/libgvfsdbus.so
+7ffa8b878000-7ffa8ba78000 ---p 0002f000 08:01 12715194                   /usr/lib/x86_64-linux-gnu/gio/modules/libgvfsdbus.so
+7ffa8ba78000-7ffa8ba79000 r--p 0002f000 08:01 12715194                   /usr/lib/x86_64-linux-gnu/gio/modules/libgvfsdbus.so
+7ffa8ba79000-7ffa8ba7a000 rw-p 00030000 08:01 12715194                   /usr/lib/x86_64-linux-gnu/gio/modules/libgvfsdbus.so
+7ffa8ba7a000-7ffa8ba7b000 rw-p 00000000 00:00 0 
+7ffa8ba7b000-7ffa8bad4000 r-xp 00000000 08:01 12324517                   /usr/lib/x86_64-linux-gnu/libibus-1.0.so.5.0.505
+7ffa8bad4000-7ffa8bcd4000 ---p 00059000 08:01 12324517                   /usr/lib/x86_64-linux-gnu/libibus-1.0.so.5.0.505
+7ffa8bcd4000-7ffa8bcd6000 r--p 00059000 08:01 12324517                   /usr/lib/x86_64-linux-gnu/libibus-1.0.so.5.0.505
+7ffa8bcd6000-7ffa8bcd7000 rw-p 0005b000 08:01 12324517                   /usr/lib/x86_64-linux-gnu/libibus-1.0.so.5.0.505
+7ffa8bcd7000-7ffa8bcd8000 rw-p 00000000 00:00 0 
+7ffa8bcd8000-7ffa8bcd9000 r--s 00002000 08:01 9978791                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-ide-play-2.14.1.jar
+7ffa8bcd9000-7ffa8bcdd000 r--s 00021000 08:01 9978764                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-code-quality-2.14.1.jar
+7ffa8bcdd000-7ffa8bcf9000 r--s 000d3000 08:01 9978803                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-dependency-management-2.14.1.jar
+7ffa8bcf9000-7ffa8bcff000 r-xp 00000000 08:01 12716972                   /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+7ffa8bcff000-7ffa8beff000 ---p 00006000 08:01 12716972                   /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+7ffa8beff000-7ffa8bf00000 r--p 00006000 08:01 12716972                   /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+7ffa8bf00000-7ffa8bf01000 rw-p 00007000 08:01 12716972                   /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+7ffa8bf01000-7ffa8bf53000 r--p 00000000 08:01 13371631                   /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+7ffa8bf53000-7ffa8bfaa000 r--p 00000000 08:01 13371794                   /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-R.ttf
+7ffa8bfaa000-7ffa8bfac000 r--s 0000a000 08:01 9978787                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-language-groovy-2.14.1.jar
+7ffa8bfac000-7ffa8bfaf000 r--s 0000e000 08:01 9978780                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-ivy-2.14.1.jar
+7ffa8bfaf000-7ffa8bfb5000 r--s 0001a000 08:01 9978792                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-language-native-2.14.1.jar
+7ffa8bfb5000-7ffa8bfb9000 r--s 0001a000 08:01 9978784                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-platform-jvm-2.14.1.jar
+7ffa8bfb9000-7ffa8bfc0000 r--s 0008e000 08:01 9978776                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-build-comparison-2.14.1.jar
+7ffa8bfc0000-7ffa8bfc2000 r--s 00004000 08:01 9978770                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-announce-2.14.1.jar
+7ffa8bfc2000-7ffa8bfc5000 r--s 00009000 08:01 9978771                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-scala-2.14.1.jar
+7ffa8bfc5000-7ffa8bfc7000 r--s 00009000 08:01 9978765                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-jetty-2.14.1.jar
+7ffa8bfc7000-7ffa8bfc9000 r--s 0000d000 08:01 9978773                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-signing-2.14.1.jar
+7ffa8bfcb000-7ffa8bfd1000 r--s 00022000 08:01 9978768                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-maven-2.14.1.jar
+7ffa8bfd1000-7ffa8bfd6000 r--s 00015000 08:01 9978794                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-testing-base-2.14.1.jar
+7ffa8bfd6000-7ffa8bfdb000 r--s 0002b000 08:01 9978793                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-ide-native-2.14.1.jar
+7ffa8bfdb000-7ffa8bfe1000 r--s 00025000 08:01 9978737                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/gradle-messaging-2.14.1.jar
+7ffa8bfe1000-7ffa8c000000 r--s 001d1000 08:01 9978731                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/ant-1.9.6.jar
+7ffa8c000000-7ffa8c021000 rw-p 00000000 00:00 0 
+7ffa8c021000-7ffa90000000 ---p 00000000 00:00 0 
+7ffa90000000-7ffa90002000 r--s 00008000 08:01 9978785                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-language-jvm-2.14.1.jar
+7ffa90002000-7ffa90003000 r--p 00000000 00:00 0 
+7ffa90003000-7ffa90007000 r--s 00489000 08:01 8785492                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/lib/resources.jar
+7ffa90007000-7ffa9000b000 r--s 00011000 08:01 9978775                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-javascript-2.14.1.jar
+7ffa9000b000-7ffa90016000 r--s 00059000 08:01 9978720                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/gradle-ui-2.14.1.jar
+7ffa90016000-7ffa90085000 r--s 0063e000 08:01 9978727                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/groovy-all-2.4.4.jar
+7ffa90142000-7ffa90179000 r--s 002a6000 08:01 8785457                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/lib/icons.jar
+7ffa90179000-7ffa9017a000 r-xp 00000000 08:01 16254964                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libjawt.so
+7ffa9017a000-7ffa90379000 ---p 00001000 08:01 16254964                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libjawt.so
+7ffa90379000-7ffa9037a000 rw-p 00000000 08:01 16254964                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libjawt.so
+7ffa9037a000-7ffa9057a000 rw-p 00000000 00:00 0 
+7ffa9057a000-7ffa9057d000 r--s 00008000 08:01 9978795                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-testing-native-2.14.1.jar
+7ffa9057d000-7ffa905b4000 r--s 001bd000 08:01 9978718                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/gradle-core-2.14.1.jar
+7ffa905b4000-7ffa905cc000 r--s 00dd0000 08:01 8785437                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/lib/resources_en.jar
+7ffa905cc000-7ffa905ce000 r--s 00014000 08:01 7996205                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/plugins/gradle/lib/gradle-jps-plugin.jar
+7ffa905ce000-7ffa905d0000 r--s 0001a000 08:01 7995909                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/plugins/maven/lib/maven-jps-plugin.jar
+7ffa905d0000-7ffa905d2000 r--s 00023000 08:01 8127247                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/plugins/Groovy/lib/groovy-jps-plugin.jar
+7ffa905d2000-7ffa905d3000 r--s 00003000 08:01 9978801                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-resources-s3-2.14.1.jar
+7ffa905d3000-7ffa905d5000 r--s 00008000 08:01 9978766                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/plugins/gradle-antlr-2.14.1.jar
+7ffa905d5000-7ffa905d6000 r--s 00002000 08:01 9978740                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/gradle-docs-2.14.1.jar
+7ffa905d6000-7ffa905d8000 r--s 00005000 08:01 9978719                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/gradle-cli-2.14.1.jar
+7ffa905d8000-7ffa905e7000 r--s 00080000 08:01 9978728                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/gradle-model-core-2.14.1.jar
+7ffa905e7000-7ffa905e9000 r--s 00007000 08:01 9978729                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/gradle-model-groovy-2.14.1.jar
+7ffa905e9000-7ffa905ea000 r--s 00004000 08:01 9978747                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/ant-launcher-1.9.6.jar
+7ffa905ea000-7ffa905ec000 r--s 00009000 08:01 9978722                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/gradle-native-2.14.1.jar
+7ffa905ec000-7ffa905ed000 r--s 00000000 08:01 9978715                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/gradle-installation-beacon-2.14.1.jar
+7ffa905ed000-7ffa905ef000 r--s 00005000 08:01 9978714                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/gradle-wrapper-2.14.1.jar
+7ffa905ef000-7ffa905f7000 r--s 0003a000 08:01 9978716                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/gradle-base-services-2.14.1.jar
+7ffa905f7000-7ffa90605000 r--s 0004f000 08:01 9978721                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/gradle-tooling-api-2.14.1.jar
+7ffa90636000-7ffa90639000 ---p 00000000 00:00 0 
+7ffa90639000-7ffa9066f000 rw-p 00000000 00:00 0 
+7ffa9066f000-7ffa90735000 r--s 00f3d000 08:01 8785473                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/lib/openapi.jar
+7ffa90735000-7ffa90935000 rw-p 00000000 00:00 0 
+7ffa90935000-7ffa90936000 ---p 00000000 00:00 0 
+7ffa90936000-7ffa91136000 rw-p 00000000 00:00 0                          [stack:3012]
+7ffa91136000-7ffa91137000 ---p 00000000 00:00 0 
+7ffa91137000-7ffa91937000 rw-p 00000000 00:00 0                          [stack:3011]
+7ffa91937000-7ffa91942000 r-xp 00000000 08:01 12715187                   /usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so
+7ffa91942000-7ffa91b42000 ---p 0000b000 08:01 12715187                   /usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so
+7ffa91b42000-7ffa91b43000 r--p 0000b000 08:01 12715187                   /usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so
+7ffa91b43000-7ffa91b44000 rw-p 0000c000 08:01 12715187                   /usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so
+7ffa91b44000-7ffa91b4b000 r-xp 00000000 08:01 12329139                   /usr/lib/x86_64-linux-gnu/libogg.so.0.8.1
+7ffa91b4b000-7ffa91d4b000 ---p 00007000 08:01 12329139                   /usr/lib/x86_64-linux-gnu/libogg.so.0.8.1
+7ffa91d4b000-7ffa91d4c000 r--p 00007000 08:01 12329139                   /usr/lib/x86_64-linux-gnu/libogg.so.0.8.1
+7ffa91d4c000-7ffa91d4d000 rw-p 00008000 08:01 12329139                   /usr/lib/x86_64-linux-gnu/libogg.so.0.8.1
+7ffa91d4d000-7ffa91d79000 r-xp 00000000 08:01 12329417                   /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7ffa91d79000-7ffa91f78000 ---p 0002c000 08:01 12329417                   /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7ffa91f78000-7ffa91f79000 r--p 0002b000 08:01 12329417                   /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7ffa91f79000-7ffa91f7a000 rw-p 0002c000 08:01 12329417                   /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7ffa91f7a000-7ffa91f83000 r-xp 00000000 08:01 12329045                   /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.0
+7ffa91f83000-7ffa92182000 ---p 00009000 08:01 12329045                   /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.0
+7ffa92182000-7ffa92183000 r--p 00008000 08:01 12329045                   /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.0
+7ffa92183000-7ffa92184000 rw-p 00009000 08:01 12329045                   /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.0
+7ffa92184000-7ffa92198000 r-xp 00000000 08:01 12326334                   /usr/lib/x86_64-linux-gnu/libtdb.so.1.3.8
+7ffa92198000-7ffa92397000 ---p 00014000 08:01 12326334                   /usr/lib/x86_64-linux-gnu/libtdb.so.1.3.8
+7ffa92397000-7ffa92398000 r--p 00013000 08:01 12326334                   /usr/lib/x86_64-linux-gnu/libtdb.so.1.3.8
+7ffa92398000-7ffa92399000 rw-p 00014000 08:01 12326334                   /usr/lib/x86_64-linux-gnu/libtdb.so.1.3.8
+7ffa92399000-7ffa923a0000 r-xp 00000000 08:01 12329421                   /usr/lib/x86_64-linux-gnu/libvorbisfile.so.3.3.4
+7ffa923a0000-7ffa9259f000 ---p 00007000 08:01 12329421                   /usr/lib/x86_64-linux-gnu/libvorbisfile.so.3.3.4
+7ffa9259f000-7ffa925a0000 r--p 00006000 08:01 12329421                   /usr/lib/x86_64-linux-gnu/libvorbisfile.so.3.3.4
+7ffa925a0000-7ffa925a1000 rw-p 00007000 08:01 12329421                   /usr/lib/x86_64-linux-gnu/libvorbisfile.so.3.3.4
+7ffa925a1000-7ffa925b0000 r-xp 00000000 08:01 12328559                   /usr/lib/x86_64-linux-gnu/libcanberra.so.0.2.5
+7ffa925b0000-7ffa927af000 ---p 0000f000 08:01 12328559                   /usr/lib/x86_64-linux-gnu/libcanberra.so.0.2.5
+7ffa927af000-7ffa927b0000 r--p 0000e000 08:01 12328559                   /usr/lib/x86_64-linux-gnu/libcanberra.so.0.2.5
+7ffa927b0000-7ffa927b1000 rw-p 0000f000 08:01 12328559                   /usr/lib/x86_64-linux-gnu/libcanberra.so.0.2.5
+7ffa927b1000-7ffa927b5000 r-xp 00000000 08:01 12328555                   /usr/lib/x86_64-linux-gnu/libcanberra-gtk.so.0.1.9
+7ffa927b5000-7ffa929b4000 ---p 00004000 08:01 12328555                   /usr/lib/x86_64-linux-gnu/libcanberra-gtk.so.0.1.9
+7ffa929b4000-7ffa929b5000 r--p 00003000 08:01 12328555                   /usr/lib/x86_64-linux-gnu/libcanberra-gtk.so.0.1.9
+7ffa929b5000-7ffa929b6000 rw-p 00004000 08:01 12328555                   /usr/lib/x86_64-linux-gnu/libcanberra-gtk.so.0.1.9
+7ffa929b6000-7ffa929bb000 r-xp 00000000 08:01 12715442                   /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libcanberra-gtk-module.so
+7ffa929bb000-7ffa92bba000 ---p 00005000 08:01 12715442                   /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libcanberra-gtk-module.so
+7ffa92bba000-7ffa92bbb000 r--p 00004000 08:01 12715442                   /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libcanberra-gtk-module.so
+7ffa92bbb000-7ffa92bbc000 rw-p 00005000 08:01 12715442                   /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libcanberra-gtk-module.so
+7ffa92bbc000-7ffa92beb000 r-xp 00000000 08:01 12715424                   /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so
+7ffa92beb000-7ffa92deb000 ---p 0002f000 08:01 12715424                   /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so
+7ffa92deb000-7ffa92dec000 r--p 0002f000 08:01 12715424                   /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so
+7ffa92dec000-7ffa92ded000 rw-p 00030000 08:01 12715424                   /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so
+7ffa92ded000-7ffa92dfd000 r-xp 00000000 08:01 12324694                   /usr/lib/x86_64-linux-gnu/libunity-gtk2-parser.so.0.0.0
+7ffa92dfd000-7ffa92ffc000 ---p 00010000 08:01 12324694                   /usr/lib/x86_64-linux-gnu/libunity-gtk2-parser.so.0.0.0
+7ffa92ffc000-7ffa92ffd000 r--p 0000f000 08:01 12324694                   /usr/lib/x86_64-linux-gnu/libunity-gtk2-parser.so.0.0.0
+7ffa92ffd000-7ffa92ffe000 rw-p 00010000 08:01 12324694                   /usr/lib/x86_64-linux-gnu/libunity-gtk2-parser.so.0.0.0
+7ffa92ffe000-7ffa93003000 r-xp 00000000 08:01 12714135                   /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libunity-gtk-module.so
+7ffa93003000-7ffa93202000 ---p 00005000 08:01 12714135                   /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libunity-gtk-module.so
+7ffa93202000-7ffa93203000 r--p 00004000 08:01 12714135                   /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libunity-gtk-module.so
+7ffa93203000-7ffa93204000 rw-p 00005000 08:01 12714135                   /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libunity-gtk-module.so
+7ffa93204000-7ffa93215000 r-xp 00000000 08:01 12715445                   /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/liboverlay-scrollbar.so
+7ffa93215000-7ffa93414000 ---p 00011000 08:01 12715445                   /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/liboverlay-scrollbar.so
+7ffa93414000-7ffa93415000 r--p 00010000 08:01 12715445                   /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/liboverlay-scrollbar.so
+7ffa93415000-7ffa93416000 rw-p 00011000 08:01 12715445                   /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/liboverlay-scrollbar.so
+7ffa93416000-7ffa93417000 r-xp 00000000 08:01 12321153                   /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.4002.0
+7ffa93417000-7ffa93616000 ---p 00001000 08:01 12321153                   /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.4002.0
+7ffa93616000-7ffa93617000 r--p 00000000 08:01 12321153                   /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.4002.0
+7ffa93617000-7ffa93618000 rw-p 00001000 08:01 12321153                   /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.4002.0
+7ffa93618000-7ffa9361e000 r-xp 00000000 08:01 12328623                   /usr/lib/x86_64-linux-gnu/libdatrie.so.1.3.1
+7ffa9361e000-7ffa9381d000 ---p 00006000 08:01 12328623                   /usr/lib/x86_64-linux-gnu/libdatrie.so.1.3.1
+7ffa9381d000-7ffa9381e000 r--p 00005000 08:01 12328623                   /usr/lib/x86_64-linux-gnu/libdatrie.so.1.3.1
+7ffa9381e000-7ffa9381f000 rw-p 00006000 08:01 12328623                   /usr/lib/x86_64-linux-gnu/libdatrie.so.1.3.1
+7ffa9381f000-7ffa93843000 r-xp 00000000 08:01 12320939                   /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.0.1
+7ffa93843000-7ffa93a42000 ---p 00024000 08:01 12320939                   /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.0.1
+7ffa93a42000-7ffa93a44000 r--p 00023000 08:01 12320939                   /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.0.1
+7ffa93a44000-7ffa93a45000 rw-p 00025000 08:01 12320939                   /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.0.1
+7ffa93a45000-7ffa93a82000 r-xp 00000000 08:01 8522451                    /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7ffa93a82000-7ffa93c81000 ---p 0003d000 08:01 8522451                    /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7ffa93c81000-7ffa93c82000 r--p 0003c000 08:01 8522451                    /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7ffa93c82000-7ffa93c83000 rw-p 0003d000 08:01 8522451                    /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7ffa93c83000-7ffa93c8a000 r-xp 00000000 08:01 12326571                   /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7ffa93c8a000-7ffa93e89000 ---p 00007000 08:01 12326571                   /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7ffa93e89000-7ffa93e8a000 r--p 00006000 08:01 12326571                   /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7ffa93e8a000-7ffa93e8b000 rw-p 00007000 08:01 12326571                   /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7ffa93e8b000-7ffa93eb2000 r-xp 00000000 08:01 8522568                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7ffa93eb2000-7ffa940b2000 ---p 00027000 08:01 8522568                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7ffa940b2000-7ffa940b4000 r--p 00027000 08:01 8522568                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7ffa940b4000-7ffa940b5000 rw-p 00029000 08:01 8522568                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7ffa940b5000-7ffa940bd000 r-xp 00000000 08:01 12329348                   /usr/lib/x86_64-linux-gnu/libthai.so.0.2.0
+7ffa940bd000-7ffa942bc000 ---p 00008000 08:01 12329348                   /usr/lib/x86_64-linux-gnu/libthai.so.0.2.0
+7ffa942bc000-7ffa942bd000 r--p 00007000 08:01 12329348                   /usr/lib/x86_64-linux-gnu/libthai.so.0.2.0
+7ffa942bd000-7ffa942be000 rw-p 00008000 08:01 12329348                   /usr/lib/x86_64-linux-gnu/libthai.so.0.2.0
+7ffa942be000-7ffa94311000 r-xp 00000000 08:01 12328993                   /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.927.0
+7ffa94311000-7ffa94511000 ---p 00053000 08:01 12328993                   /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.927.0
+7ffa94511000-7ffa94512000 r--p 00053000 08:01 12328993                   /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.927.0
+7ffa94512000-7ffa94513000 rw-p 00054000 08:01 12328993                   /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.927.0
+7ffa94513000-7ffa9452a000 r-xp 00000000 08:01 8522664                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7ffa9452a000-7ffa9472a000 ---p 00017000 08:01 8522664                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7ffa9472a000-7ffa9472b000 r--p 00017000 08:01 8522664                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7ffa9472b000-7ffa9472c000 rw-p 00018000 08:01 8522664                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7ffa9472c000-7ffa9472e000 rw-p 00000000 00:00 0 
+7ffa9472e000-7ffa9474e000 r-xp 00000000 08:01 8523599                    /lib/x86_64-linux-gnu/libselinux.so.1
+7ffa9474e000-7ffa9494d000 ---p 00020000 08:01 8523599                    /lib/x86_64-linux-gnu/libselinux.so.1
+7ffa9494d000-7ffa9494e000 r--p 0001f000 08:01 8523599                    /lib/x86_64-linux-gnu/libselinux.so.1
+7ffa9494e000-7ffa9494f000 rw-p 00020000 08:01 8523599                    /lib/x86_64-linux-gnu/libselinux.so.1
+7ffa9494f000-7ffa94951000 rw-p 00000000 00:00 0 
+7ffa94951000-7ffa94969000 r-xp 00000000 08:01 8523784                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7ffa94969000-7ffa94b68000 ---p 00018000 08:01 8523784                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7ffa94b68000-7ffa94b69000 r--p 00017000 08:01 8523784                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7ffa94b69000-7ffa94b6a000 rw-p 00018000 08:01 8523784                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7ffa94b6a000-7ffa94b72000 r-xp 00000000 08:01 12329474                   /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+7ffa94b72000-7ffa94d71000 ---p 00008000 08:01 12329474                   /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+7ffa94d71000-7ffa94d72000 r--p 00007000 08:01 12329474                   /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+7ffa94d72000-7ffa94d73000 rw-p 00008000 08:01 12329474                   /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+7ffa94d73000-7ffa94d75000 r-xp 00000000 08:01 12329478                   /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7ffa94d75000-7ffa94f74000 ---p 00002000 08:01 12329478                   /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7ffa94f74000-7ffa94f75000 r--p 00001000 08:01 12329478                   /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7ffa94f75000-7ffa94f76000 rw-p 00002000 08:01 12329478                   /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7ffa94f76000-7ffa94f9b000 r-xp 00000000 08:01 8522056                    /lib/x86_64-linux-gnu/libpng12.so.0.50.0
+7ffa94f9b000-7ffa9519a000 ---p 00025000 08:01 8522056                    /lib/x86_64-linux-gnu/libpng12.so.0.50.0
+7ffa9519a000-7ffa9519b000 r--p 00024000 08:01 8522056                    /lib/x86_64-linux-gnu/libpng12.so.0.50.0
+7ffa9519b000-7ffa9519c000 rw-p 00025000 08:01 8522056                    /lib/x86_64-linux-gnu/libpng12.so.0.50.0
+7ffa9519c000-7ffa9523c000 r-xp 00000000 08:01 12320942                   /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.30.2
+7ffa9523c000-7ffa9543c000 ---p 000a0000 08:01 12320942                   /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.30.2
+7ffa9543c000-7ffa95443000 r--p 000a0000 08:01 12320942                   /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.30.2
+7ffa95443000-7ffa95444000 rw-p 000a7000 08:01 12320942                   /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.30.2
+7ffa95444000-7ffa954e1000 r-xp 00000000 08:01 12321729                   /usr/lib/x86_64-linux-gnu/libfreetype.so.6.11.1
+7ffa954e1000-7ffa956e0000 ---p 0009d000 08:01 12321729                   /usr/lib/x86_64-linux-gnu/libfreetype.so.6.11.1
+7ffa956e0000-7ffa956e6000 r--p 0009c000 08:01 12321729                   /usr/lib/x86_64-linux-gnu/libfreetype.so.6.11.1
+7ffa956e6000-7ffa956e7000 rw-p 000a2000 08:01 12321729                   /usr/lib/x86_64-linux-gnu/libfreetype.so.6.11.1
+7ffa956e7000-7ffa956e9000 r-xp 00000000 08:01 12328429                   /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7ffa956e9000-7ffa958e8000 ---p 00002000 08:01 12328429                   /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7ffa958e8000-7ffa958e9000 r--p 00001000 08:01 12328429                   /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7ffa958e9000-7ffa958ea000 rw-p 00002000 08:01 12328429                   /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7ffa958ea000-7ffa958ec000 r-xp 00000000 08:01 12328425                   /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7ffa958ec000-7ffa95aeb000 ---p 00002000 08:01 12328425                   /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7ffa95aeb000-7ffa95aec000 r--p 00001000 08:01 12328425                   /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7ffa95aec000-7ffa95aed000 rw-p 00002000 08:01 12328425                   /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7ffa95aed000-7ffa95af6000 r-xp 00000000 08:01 12325347                   /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7ffa95af6000-7ffa95cf5000 ---p 00009000 08:01 12325347                   /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7ffa95cf5000-7ffa95cf6000 r--p 00008000 08:01 12325347                   /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7ffa95cf6000-7ffa95cf7000 rw-p 00009000 08:01 12325347                   /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7ffa95cf7000-7ffa95cf9000 r-xp 00000000 08:01 12328443                   /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7ffa95cf9000-7ffa95ef8000 ---p 00002000 08:01 12328443                   /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7ffa95ef8000-7ffa95ef9000 r--p 00001000 08:01 12328443                   /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7ffa95ef9000-7ffa95efa000 rw-p 00002000 08:01 12328443                   /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7ffa95efa000-7ffa96000000 r-xp 00000000 08:01 8523582                    /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7ffa96000000-7ffa961ff000 ---p 00106000 08:01 8523582                    /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7ffa961ff000-7ffa96200000 r--p 00105000 08:01 8523582                    /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7ffa96200000-7ffa96201000 rw-p 00106000 08:01 8523582                    /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7ffa96201000-7ffa96202000 rw-p 00000000 00:00 0 
+7ffa96202000-7ffa96251000 r-xp 00000000 08:01 12321150                   /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4002.0
+7ffa96251000-7ffa96451000 ---p 0004f000 08:01 12321150                   /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4002.0
+7ffa96451000-7ffa96452000 r--p 0004f000 08:01 12321150                   /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4002.0
+7ffa96452000-7ffa96453000 rw-p 00050000 08:01 12321150                   /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4002.0
+7ffa96453000-7ffa9648d000 r-xp 00000000 08:01 12329560                   /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.8.0
+7ffa9648d000-7ffa9668c000 ---p 0003a000 08:01 12329560                   /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.8.0
+7ffa9668c000-7ffa9668e000 r--p 00039000 08:01 12329560                   /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.8.0
+7ffa9668e000-7ffa9668f000 rw-p 0003b000 08:01 12329560                   /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.8.0
+7ffa9668f000-7ffa966d9000 r-xp 00000000 08:01 12326133                   /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.3600.3
+7ffa966d9000-7ffa968d9000 ---p 0004a000 08:01 12326133                   /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.3600.3
+7ffa968d9000-7ffa968db000 r--p 0004a000 08:01 12326133                   /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.3600.3
+7ffa968db000-7ffa968dc000 rw-p 0004c000 08:01 12326133                   /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.3600.3
+7ffa968dc000-7ffa968f0000 r-xp 00000000 08:01 12326135                   /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.3600.3
+7ffa968f0000-7ffa96aef000 ---p 00014000 08:01 12326135                   /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.3600.3
+7ffa96aef000-7ffa96af0000 r--p 00013000 08:01 12326135                   /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.3600.3
+7ffa96af0000-7ffa96af1000 rw-p 00014000 08:01 12326135                   /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.3600.3
+7ffa96af1000-7ffa96c5d000 r-xp 00000000 08:01 12321154                   /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4002.0
+7ffa96c5d000-7ffa96e5c000 ---p 0016c000 08:01 12321154                   /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4002.0
+7ffa96e5c000-7ffa96e60000 r--p 0016b000 08:01 12321154                   /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4002.0
+7ffa96e60000-7ffa96e62000 rw-p 0016f000 08:01 12321154                   /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4002.0
+7ffa96e62000-7ffa96e64000 rw-p 00000000 00:00 0 
+7ffa96e64000-7ffa96e84000 r-xp 00000000 08:01 12321792                   /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.3000.7
+7ffa96e84000-7ffa97083000 ---p 00020000 08:01 12321792                   /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.3000.7
+7ffa97083000-7ffa97084000 r--p 0001f000 08:01 12321792                   /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.3000.7
+7ffa97084000-7ffa97085000 rw-p 00020000 08:01 12321792                   /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.3000.7
+7ffa97085000-7ffa9718b000 r-xp 00000000 08:01 12326613                   /usr/lib/x86_64-linux-gnu/libcairo.so.2.11301.0
+7ffa9718b000-7ffa9738a000 ---p 00106000 08:01 12326613                   /usr/lib/x86_64-linux-gnu/libcairo.so.2.11301.0
+7ffa9738a000-7ffa9738d000 r--p 00105000 08:01 12326613                   /usr/lib/x86_64-linux-gnu/libcairo.so.2.11301.0
+7ffa9738d000-7ffa9738e000 rw-p 00108000 08:01 12326613                   /usr/lib/x86_64-linux-gnu/libcairo.so.2.11301.0
+7ffa9738e000-7ffa97390000 rw-p 00000000 00:00 0 
+7ffa97390000-7ffa973af000 r-xp 00000000 08:01 12328512                   /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.21009.1
+7ffa973af000-7ffa975af000 ---p 0001f000 08:01 12328512                   /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.21009.1
+7ffa975af000-7ffa975b1000 r--p 0001f000 08:01 12328512                   /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.21009.1
+7ffa975b1000-7ffa975b2000 rw-p 00021000 08:01 12328512                   /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.21009.1
+7ffa975b2000-7ffa975bd000 r-xp 00000000 08:01 12326131                   /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.3600.3
+7ffa975bd000-7ffa977bd000 ---p 0000b000 08:01 12326131                   /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.3600.3
+7ffa977bd000-7ffa977be000 r--p 0000b000 08:01 12326131                   /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.3600.3
+7ffa977be000-7ffa977bf000 rw-p 0000c000 08:01 12326131                   /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.3600.3
+7ffa977bf000-7ffa977c2000 r-xp 00000000 08:01 12321132                   /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4002.0
+7ffa977c2000-7ffa979c1000 ---p 00003000 08:01 12321132                   /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4002.0
+7ffa979c1000-7ffa979c2000 r--p 00002000 08:01 12321132                   /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4002.0
+7ffa979c2000-7ffa979c3000 rw-p 00003000 08:01 12321132                   /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4002.0
+7ffa979c3000-7ffa97df3000 r-xp 00000000 08:01 12325256                   /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.23
+7ffa97df3000-7ffa97ff2000 ---p 00430000 08:01 12325256                   /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.23
+7ffa97ff2000-7ffa97ff9000 r--p 0042f000 08:01 12325256                   /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.23
+7ffa97ff9000-7ffa97ffd000 rw-p 00436000 08:01 12325256                   /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.23
+7ffa97ffd000-7ffa98000000 rw-p 00000000 00:00 0 
+7ffa98000000-7ffa98021000 rw-p 00000000 00:00 0 
+7ffa98021000-7ffa9c000000 ---p 00000000 00:00 0 
+7ffa9c000000-7ffa9c298000 rw-p 00000000 00:00 0 
+7ffa9c298000-7ffaa0000000 ---p 00000000 00:00 0 
+7ffaa0000000-7ffaa0033000 rw-p 00000000 00:00 0 
+7ffaa0033000-7ffaa4000000 ---p 00000000 00:00 0 
+7ffaa4000000-7ffaa48f5000 rw-p 00000000 00:00 0 
+7ffaa48f5000-7ffaa8000000 ---p 00000000 00:00 0 
+7ffaa8000000-7ffaabffb000 rw-p 00000000 00:00 0 
+7ffaabffb000-7ffaac000000 ---p 00000000 00:00 0 
+7ffaac000000-7ffaaddb2000 rw-p 00000000 00:00 0 
+7ffaaddb2000-7ffab0000000 ---p 00000000 00:00 0 
+7ffab0000000-7ffab08b2000 rw-p 00000000 00:00 0 
+7ffab08b2000-7ffab4000000 ---p 00000000 00:00 0 
+7ffab4000000-7ffab7da7000 rw-p 00000000 00:00 0 
+7ffab7da7000-7ffab8000000 ---p 00000000 00:00 0 
+7ffab8000000-7ffab8a9c000 rw-p 00000000 00:00 0 
+7ffab8a9c000-7ffabc000000 ---p 00000000 00:00 0 
+7ffabc000000-7ffabc021000 rw-p 00000000 00:00 0 
+7ffabc021000-7ffac0000000 ---p 00000000 00:00 0 
+7ffac0000000-7ffac07d9000 rw-p 00000000 00:00 0 
+7ffac07d9000-7ffac4000000 ---p 00000000 00:00 0 
+7ffac4000000-7ffac44d5000 rw-p 00000000 00:00 0 
+7ffac44d5000-7ffac8000000 ---p 00000000 00:00 0 
+7ffac8000000-7ffac8021000 rw-p 00000000 00:00 0 
+7ffac8021000-7ffacc000000 ---p 00000000 00:00 0 
+7ffacc000000-7ffacc114000 rw-p 00000000 00:00 0 
+7ffacc114000-7ffad0000000 ---p 00000000 00:00 0 
+7ffad0000000-7ffad0001000 r--s 00006000 08:01 9978736                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/gradle-base-services-groovy-2.14.1.jar
+7ffad0001000-7ffad0003000 r--s 0000c000 08:01 8127233                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/plugins/IntelliLang/lib/intellilang-jps-plugin.jar
+7ffad0003000-7ffad0004000 r--s 00000000 08:01 9978717                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/gradle-jvm-services-2.14.1.jar
+7ffad0004000-7ffad0006000 r--s 00002000 08:01 9978741                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/gradle-open-api-2.14.1.jar
+7ffad0006000-7ffad0007000 r--s 00001000 08:01 9978726                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/gradle-process-services-2.14.1.jar
+7ffad0007000-7ffad0012000 r--s 00051000 08:01 9978713                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/gradle-launcher-2.14.1.jar
+7ffad0021000-7ffad002a000 r--s 0010c000 08:01 8127234                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/plugins/IntelliLang/lib/IntelliLang.jar
+7ffad002b000-7ffad002d000 r--s 00001000 08:01 16254854                   /usr/lib/jvm/java-8-oracle/jre/lib/ext/dnsns.jar
+7ffad0036000-7ffad0043000 r--s 000ab000 08:01 8785486                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/lib/velocity.jar
+7ffad0043000-7ffad005b000 r--s 00115000 08:01 8785426                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/lib/xerces.jar
+7ffad005b000-7ffad0077000 r--s 00393000 08:01 16254856                   /usr/lib/jvm/java-8-oracle/jre/lib/ext/cldrdata.jar
+7ffad0077000-7ffad0078000 r--s 00000000 08:01 6566385                    /var/cache/fontconfig/c05880de57d1f5e948fdfacc138775d9-le64.cache-4
+7ffad0078000-7ffad0083000 r--s 00000000 08:01 6560877                    /var/cache/fontconfig/945677eb7aeaf62f1d50efc3fb3ec7d8-le64.cache-4
+7ffad0083000-7ffad0085000 r--s 00000000 08:01 6566375                    /var/cache/fontconfig/99e8ed0e538f840c565b6ed5dad60d56-le64.cache-4
+7ffad0085000-7ffad008e000 r--s 00000000 08:01 6566374                    /var/cache/fontconfig/a6d8cf8e4ec09cdbc8633c31745a07dd-le64.cache-4
+7ffad008e000-7ffad0094000 r--s 00000000 08:01 6566362                    /var/cache/fontconfig/2cd17615ca594fa2959ae173292e504c-le64.cache-4
+7ffad0094000-7ffad009b000 r--s 00000000 08:01 6566359                    /var/cache/fontconfig/a755afe4a08bf5b97852ceb7400b47bc-le64.cache-4
+7ffad009b000-7ffad00a4000 r--s 00000000 08:01 6566353                    /var/cache/fontconfig/6d41288fd70b0be22e8c3a91e032eec0-le64.cache-4
+7ffad00a4000-7ffad00b8000 r--s 00000000 08:01 6566351                    /var/cache/fontconfig/04aabc0a78ac019cf9454389977116d2-le64.cache-4
+7ffad00b8000-7ffad00bc000 r--s 00000000 08:01 6566348                    /var/cache/fontconfig/385c0604a188198f04d133e54aba7fe7-le64.cache-4
+7ffad00bc000-7ffad00c1000 r--s 00000000 08:01 6566338                    /var/cache/fontconfig/8801497958630a81b71ace7c5f9b32a8-le64.cache-4
+7ffad00c1000-7ffad00fc000 r--s 00000000 08:01 6566337                    /var/cache/fontconfig/365b55f210c0a22e9a19e35191240f32-le64.cache-4
+7ffad00fc000-7ffad0103000 r--s 00000000 08:01 6566336                    /var/cache/fontconfig/3047814df9a2f067bd2d96a2b9c36e5a-le64.cache-4
+7ffad0103000-7ffad0109000 r--s 00000000 08:01 6566329                    /var/cache/fontconfig/b47c4e1ecd0709278f4910c18777a504-le64.cache-4
+7ffad0109000-7ffad0112000 r--s 00000000 08:01 6566328                    /var/cache/fontconfig/52f7bdb7ce746bfd7eaa1985bd9cfa93-le64.cache-4
+7ffad0112000-7ffad0125000 r--s 00000000 08:01 6566325                    /var/cache/fontconfig/d52a8644073d54c13679302ca1180695-le64.cache-4
+7ffad0125000-7ffad012e000 r--s 00000000 08:01 6566324                    /var/cache/fontconfig/3f7329c5293ffd510edef78f73874cfd-le64.cache-4
+7ffad012e000-7ffad01db000 r-xp 00000000 08:01 12321063                   /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.23
+7ffad01db000-7ffad03db000 ---p 000ad000 08:01 12321063                   /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.23
+7ffad03db000-7ffad03df000 r--p 000ad000 08:01 12321063                   /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.23
+7ffad03df000-7ffad03e1000 rw-p 000b1000 08:01 12321063                   /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.23
+7ffad03e1000-7ffad03e4000 ---p 00000000 00:00 0 
+7ffad03e4000-7ffad06e2000 rw-p 00000000 00:00 0                          [stack:3010]
+7ffad06e2000-7ffad06e7000 r-xp 00000000 08:01 12326076                   /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7ffad06e7000-7ffad08e6000 ---p 00005000 08:01 12326076                   /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7ffad08e6000-7ffad08e7000 r--p 00004000 08:01 12326076                   /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7ffad08e7000-7ffad08e8000 rw-p 00005000 08:01 12326076                   /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7ffad08e8000-7ffad08f1000 r-xp 00000000 08:01 12328427                   /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7ffad08f1000-7ffad0af0000 ---p 00009000 08:01 12328427                   /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7ffad0af0000-7ffad0af1000 r--p 00008000 08:01 12328427                   /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7ffad0af1000-7ffad0af2000 rw-p 00009000 08:01 12328427                   /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7ffad0af2000-7ffad0af5000 ---p 00000000 00:00 0 
+7ffad0af5000-7ffad0bf3000 rw-p 00000000 00:00 0                          [stack:3009]
+7ffad0bf3000-7ffad0c09000 r-xp 00000000 08:01 8522549                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7ffad0c09000-7ffad0e08000 ---p 00016000 08:01 8522549                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7ffad0e08000-7ffad0e09000 rw-p 00015000 08:01 8522549                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7ffad0e09000-7ffad0e6e000 r-xp 00000000 08:01 16254985                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libfontmanager.so
+7ffad0e6e000-7ffad106d000 ---p 00065000 08:01 16254985                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libfontmanager.so
+7ffad106d000-7ffad1072000 rw-p 00064000 08:01 16254985                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libfontmanager.so
+7ffad1072000-7ffad1082000 rw-p 00000000 00:00 0 
+7ffad1082000-7ffad1087000 r-xp 00000000 08:01 12328431                   /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7ffad1087000-7ffad1286000 ---p 00005000 08:01 12328431                   /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7ffad1286000-7ffad1287000 r--p 00004000 08:01 12328431                   /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7ffad1287000-7ffad1288000 rw-p 00005000 08:01 12328431                   /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7ffad1288000-7ffad128a000 r-xp 00000000 08:01 12328420                   /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7ffad128a000-7ffad148a000 ---p 00002000 08:01 12328420                   /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7ffad148a000-7ffad148b000 r--p 00002000 08:01 12328420                   /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7ffad148b000-7ffad148c000 rw-p 00003000 08:01 12328420                   /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7ffad148c000-7ffad14a9000 r-xp 00000000 08:01 12329488                   /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7ffad14a9000-7ffad16a9000 ---p 0001d000 08:01 12329488                   /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7ffad16a9000-7ffad16aa000 r--p 0001d000 08:01 12329488                   /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7ffad16aa000-7ffad16ab000 rw-p 0001e000 08:01 12329488                   /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7ffad16ab000-7ffad16ba000 r-xp 00000000 08:01 12320954                   /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7ffad16ba000-7ffad18b9000 ---p 0000f000 08:01 12320954                   /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7ffad18b9000-7ffad18ba000 r--p 0000e000 08:01 12320954                   /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7ffad18ba000-7ffad18bb000 rw-p 0000f000 08:01 12320954                   /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7ffad18bb000-7ffad18c0000 r-xp 00000000 08:01 12328461                   /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7ffad18c0000-7ffad1abf000 ---p 00005000 08:01 12328461                   /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7ffad1abf000-7ffad1ac0000 r--p 00004000 08:01 12328461                   /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7ffad1ac0000-7ffad1ac1000 rw-p 00005000 08:01 12328461                   /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7ffad1ac1000-7ffad1aca000 r-xp 00000000 08:01 12326137                   /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7ffad1aca000-7ffad1cc9000 ---p 00009000 08:01 12326137                   /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7ffad1cc9000-7ffad1cca000 r--p 00008000 08:01 12326137                   /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7ffad1cca000-7ffad1ccb000 rw-p 00009000 08:01 12326137                   /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7ffad1ccb000-7ffad1dfb000 r-xp 00000000 08:01 12328416                   /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7ffad1dfb000-7ffad1ffb000 ---p 00130000 08:01 12328416                   /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7ffad1ffb000-7ffad1ffc000 r--p 00130000 08:01 12328416                   /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7ffad1ffc000-7ffad2000000 rw-p 00131000 08:01 12328416                   /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7ffad2000000-7ffad4000000 rw-p 00000000 00:00 0 
+7ffad4000000-7ffad49e5000 rw-p 00000000 00:00 0 
+7ffad49e5000-7ffad8000000 ---p 00000000 00:00 0 
+7ffad8000000-7ffad813d000 rw-p 00000000 00:00 0 
+7ffad813d000-7ffadc000000 ---p 00000000 00:00 0 
+7ffadc000000-7ffadd4c3000 rw-p 00000000 00:00 0 
+7ffadd4c3000-7ffae0000000 ---p 00000000 00:00 0 
+7ffae0000000-7ffae0001000 r--s 00000000 08:01 6566361                    /var/cache/fontconfig/e7071f4a29fa870f4323321c154eba04-le64.cache-4
+7ffae0001000-7ffae0002000 r--s 00000000 08:01 6566360                    /var/cache/fontconfig/0d8c3b2ac0904cb8a57a757ad11a4a08-le64.cache-4
+7ffae0002000-7ffae0003000 r--s 00000000 08:01 6566350                    /var/cache/fontconfig/1ac9eb803944fde146138c791f5cc56a-le64.cache-4
+7ffae0003000-7ffae0004000 r--s 00000000 08:01 6566342                    /var/cache/fontconfig/dc05db6664285cc2f12bf69c139ae4c3-le64.cache-4
+7ffae0004000-7ffae000f000 r--s 00000000 08:01 6566311                    /var/cache/fontconfig/d589a48862398ed80a3d6066f4f56f4c-le64.cache-4
+7ffae000f000-7ffae0027000 r--s 00000000 08:01 6562739                    /var/cache/fontconfig/e13b20fdb08344e0e664864cc2ede53d-le64.cache-4
+7ffae0027000-7ffae0045000 r--s 00000000 08:01 6566386                    /var/cache/fontconfig/467c019e582ee353435ea5c21d137ef6-le64.cache-4
+7ffae0045000-7ffae0048000 r--s 0000b000 08:01 9978739                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/gradle-resources-2.14.1.jar
+7ffae0048000-7ffae004d000 r--s 0001c000 08:01 9978738                    /home/hacker-machine/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/gradle-2.14.1/lib/gradle-logging-2.14.1.jar
+7ffae004d000-7ffae0053000 r--s 0003f000 08:01 16254857                   /usr/lib/jvm/java-8-oracle/jre/lib/ext/sunjce_provider.jar
+7ffae0053000-7ffae005d000 r--s 00116000 08:01 16254855                   /usr/lib/jvm/java-8-oracle/jre/lib/ext/localedata.jar
+7ffae005d000-7ffae006e000 r-xp 00000000 08:01 12326074                   /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7ffae006e000-7ffae026d000 ---p 00011000 08:01 12326074                   /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7ffae026d000-7ffae026e000 r--p 00010000 08:01 12326074                   /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7ffae026e000-7ffae026f000 rw-p 00011000 08:01 12326074                   /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7ffae026f000-7ffae02c3000 r-xp 00000000 08:01 16254982                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libawt_xawt.so
+7ffae02c3000-7ffae04c3000 ---p 00054000 08:01 16254982                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libawt_xawt.so
+7ffae04c3000-7ffae04c7000 rw-p 00054000 08:01 16254982                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libawt_xawt.so
+7ffae04c7000-7ffae04c8000 rw-p 00000000 00:00 0 
+7ffae04c8000-7ffae056a000 r-xp 00000000 08:01 16255001                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libawt.so
+7ffae056a000-7ffae076a000 ---p 000a2000 08:01 16255001                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libawt.so
+7ffae076a000-7ffae0776000 rw-p 000a2000 08:01 16255001                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libawt.so
+7ffae0776000-7ffae079a000 rw-p 00000000 00:00 0 
+7ffae079a000-7ffae0813000 r--s 010e5000 08:01 16256354                   /usr/lib/jvm/java-8-oracle/lib/tools.jar
+7ffae0813000-7ffae0829000 r-xp 00000000 08:01 16254963                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libnet.so
+7ffae0829000-7ffae0a29000 ---p 00016000 08:01 16254963                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libnet.so
+7ffae0a29000-7ffae0a2a000 rw-p 00016000 08:01 16254963                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libnet.so
+7ffae0a2a000-7ffae0a3b000 r-xp 00000000 08:01 16254977                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libnio.so
+7ffae0a3b000-7ffae0c3a000 ---p 00011000 08:01 16254977                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libnio.so
+7ffae0c3a000-7ffae0c3b000 rw-p 00010000 08:01 16254977                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libnio.so
+7ffae0c3b000-7ffae0c3c000 ---p 00000000 00:00 0 
+7ffae0c3c000-7ffae0d3c000 rw-p 00000000 00:00 0                          [stack:2834]
+7ffae0d3c000-7ffae0d3f000 ---p 00000000 00:00 0 
+7ffae0d3f000-7ffae0e3d000 rw-p 00000000 00:00 0                          [stack:2833]
+7ffae0e3d000-7ffae0e40000 ---p 00000000 00:00 0 
+7ffae0e40000-7ffae0f3e000 rw-p 00000000 00:00 0                          [stack:2832]
+7ffae0f3e000-7ffae0f41000 ---p 00000000 00:00 0 
+7ffae0f41000-7ffae103f000 rw-p 00000000 00:00 0                          [stack:2831]
+7ffae103f000-7ffae1042000 ---p 00000000 00:00 0 
+7ffae1042000-7ffae1140000 rw-p 00000000 00:00 0                          [stack:2830]
+7ffae1140000-7ffae1143000 ---p 00000000 00:00 0 
+7ffae1143000-7ffae1241000 rw-p 00000000 00:00 0                          [stack:2829]
+7ffae1241000-7ffae1244000 ---p 00000000 00:00 0 
+7ffae1244000-7ffae1342000 rw-p 00000000 00:00 0                          [stack:2828]
+7ffae1342000-7ffae1a24000 r--p 00000000 08:01 12327506                   /usr/lib/locale/locale-archive
+7ffae1a24000-7ffae1a27000 ---p 00000000 00:00 0 
+7ffae1a27000-7ffae1b25000 rw-p 00000000 00:00 0                          [stack:2827]
+7ffae1b25000-7ffae1b28000 ---p 00000000 00:00 0 
+7ffae1b28000-7ffae1c26000 rw-p 00000000 00:00 0                          [stack:2826]
+7ffae1c26000-7ffae1c27000 ---p 00000000 00:00 0 
+7ffae1c27000-7ffae1d27000 rw-p 00000000 00:00 0                          [stack:2825]
+7ffae1d27000-7ffae1f00000 r--s 03d29000 08:01 16253426                   /usr/lib/jvm/java-8-oracle/jre/lib/rt.jar
+7ffae1f00000-7ffaec030000 rwxp 00000000 00:00 0 
+7ffaec030000-7ffaf0000000 ---p 00000000 00:00 0 
+7ffaf0000000-7ffaf059f000 rw-p 00000000 00:00 0 
+7ffaf059f000-7ffaf4000000 ---p 00000000 00:00 0 
+7ffaf4000000-7ffaf4002000 r--s 00000000 08:01 6566341                    /var/cache/fontconfig/767a8244fc0220cfb567a839d0392e0b-le64.cache-4
+7ffaf4002000-7ffaf4003000 r--s 00000000 08:01 6566340                    /var/cache/fontconfig/4794a0821666d79190d59a36cb4f44b5-le64.cache-4
+7ffaf4003000-7ffaf4004000 r--s 00000000 08:01 6566335                    /var/cache/fontconfig/56cf4f4769d0f4abc89a4895d7bd3ae1-le64.cache-4
+7ffaf4004000-7ffaf4005000 r--s 00000000 08:01 6566331                    /var/cache/fontconfig/b9d506c9ac06c20b433354fa67a72993-le64.cache-4
+7ffaf4005000-7ffaf4006000 r--s 00000000 08:01 6566310                    /var/cache/fontconfig/0c9eb80ebd1c36541ebe2852d3bb0c49-le64.cache-4
+7ffaf4006000-7ffaf400a000 r--s 00000000 08:01 6553704                    /var/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-le64.cache-4
+7ffaf400a000-7ffaf4010000 r--p 00000000 08:01 6822556                    /home/hacker-machine/.config/dconf/user (deleted)
+7ffaf4010000-7ffaf4051000 r--p 00000000 08:01 13372131                   /usr/share/glib-2.0/schemas/gschemas.compiled
+7ffaf4051000-7ffaf4064000 r--s 00345000 08:01 16256216                   /usr/lib/jvm/java-8-oracle/jre/lib/resources.jar
+7ffaf4064000-7ffaf408d000 r--s 0042f000 08:01 8785445                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/lib/util.jar
+7ffaf408d000-7ffaf49d5000 rw-p 00000000 00:00 0 
+7ffaf49d5000-7ffaf4a38000 rw-p 00000000 00:00 0 
+7ffaf4a38000-7ffaf4a39000 ---p 00000000 00:00 0 
+7ffaf4a39000-7ffaf5f40000 rw-p 00000000 00:00 0                          [stack:2824]
+7ffaf5f40000-7ffaf5fe5000 ---p 00000000 00:00 0 
+7ffaf5fe5000-7ffaf6414000 rw-p 00000000 00:00 0 
+7ffaf6414000-7ffaf648f000 ---p 00000000 00:00 0 
+7ffaf648f000-7ffaf65c4000 rw-p 00000000 00:00 0 
+7ffaf65c4000-7ffaf6669000 ---p 00000000 00:00 0 
+7ffaf6669000-7ffaf666a000 rw-p 00000000 00:00 0 
+7ffaf666a000-7ffaf666b000 ---p 00000000 00:00 0 
+7ffaf666b000-7ffaf676b000 rw-p 00000000 00:00 0                          [stack:2823]
+7ffaf676b000-7ffaf676c000 ---p 00000000 00:00 0 
+7ffaf676c000-7ffaf686c000 rw-p 00000000 00:00 0                          [stack:2822]
+7ffaf686c000-7ffaf686d000 ---p 00000000 00:00 0 
+7ffaf686d000-7ffaf696d000 rw-p 00000000 00:00 0                          [stack:2821]
+7ffaf696d000-7ffaf696e000 ---p 00000000 00:00 0 
+7ffaf696e000-7ffaf6cf3000 rw-p 00000000 00:00 0                          [stack:2820]
+7ffaf6cf3000-7ffaf6df2000 ---p 00000000 00:00 0 
+7ffaf6df2000-7ffaf6e0c000 r-xp 00000000 08:01 16254999                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libzip.so
+7ffaf6e0c000-7ffaf700c000 ---p 0001a000 08:01 16254999                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libzip.so
+7ffaf700c000-7ffaf700d000 rw-p 0001a000 08:01 16254999                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libzip.so
+7ffaf700d000-7ffaf7017000 r-xp 00000000 08:01 8522892                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7ffaf7017000-7ffaf7216000 ---p 0000a000 08:01 8522892                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7ffaf7216000-7ffaf7217000 r--p 00009000 08:01 8522892                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7ffaf7217000-7ffaf7218000 rw-p 0000a000 08:01 8522892                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7ffaf7218000-7ffaf7223000 r-xp 00000000 08:01 8522822                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7ffaf7223000-7ffaf7422000 ---p 0000b000 08:01 8522822                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7ffaf7422000-7ffaf7423000 r--p 0000a000 08:01 8522822                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7ffaf7423000-7ffaf7424000 rw-p 0000b000 08:01 8522822                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7ffaf7424000-7ffaf743b000 r-xp 00000000 08:01 8522700                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7ffaf743b000-7ffaf763a000 ---p 00017000 08:01 8522700                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7ffaf763a000-7ffaf763b000 r--p 00016000 08:01 8522700                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7ffaf763b000-7ffaf763c000 rw-p 00017000 08:01 8522700                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7ffaf763c000-7ffaf763e000 rw-p 00000000 00:00 0 
+7ffaf763e000-7ffaf7647000 r-xp 00000000 08:01 8522699                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7ffaf7647000-7ffaf7846000 ---p 00009000 08:01 8522699                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7ffaf7846000-7ffaf7847000 r--p 00008000 08:01 8522699                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7ffaf7847000-7ffaf7848000 rw-p 00009000 08:01 8522699                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7ffaf7848000-7ffaf7872000 r-xp 00000000 08:01 16254976                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libjava.so
+7ffaf7872000-7ffaf7a72000 ---p 0002a000 08:01 16254976                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libjava.so
+7ffaf7a72000-7ffaf7a74000 rw-p 0002a000 08:01 16254976                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libjava.so
+7ffaf7a74000-7ffaf7a81000 r-xp 00000000 08:01 16254986                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libverify.so
+7ffaf7a81000-7ffaf7c81000 ---p 0000d000 08:01 16254986                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libverify.so
+7ffaf7c81000-7ffaf7c83000 rw-p 0000d000 08:01 16254986                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libverify.so
+7ffaf7c83000-7ffaf7c8a000 r-xp 00000000 08:01 8522887                    /lib/x86_64-linux-gnu/librt-2.19.so
+7ffaf7c8a000-7ffaf7e89000 ---p 00007000 08:01 8522887                    /lib/x86_64-linux-gnu/librt-2.19.so
+7ffaf7e89000-7ffaf7e8a000 r--p 00006000 08:01 8522887                    /lib/x86_64-linux-gnu/librt-2.19.so
+7ffaf7e8a000-7ffaf7e8b000 rw-p 00007000 08:01 8522887                    /lib/x86_64-linux-gnu/librt-2.19.so
+7ffaf7e8b000-7ffaf7f90000 r-xp 00000000 08:01 8522692                    /lib/x86_64-linux-gnu/libm-2.19.so
+7ffaf7f90000-7ffaf818f000 ---p 00105000 08:01 8522692                    /lib/x86_64-linux-gnu/libm-2.19.so
+7ffaf818f000-7ffaf8190000 r--p 00104000 08:01 8522692                    /lib/x86_64-linux-gnu/libm-2.19.so
+7ffaf8190000-7ffaf8191000 rw-p 00105000 08:01 8522692                    /lib/x86_64-linux-gnu/libm-2.19.so
+7ffaf8191000-7ffaf8e5c000 r-xp 00000000 08:01 16254961                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/server/libjvm.so
+7ffaf8e5c000-7ffaf905b000 ---p 00ccb000 08:01 16254961                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/server/libjvm.so
+7ffaf905b000-7ffaf9134000 rw-p 00cca000 08:01 16254961                   /usr/lib/jvm/java-8-oracle/jre/lib/amd64/server/libjvm.so
+7ffaf9134000-7ffaf917f000 rw-p 00000000 00:00 0 
+7ffaf917f000-7ffaf9339000 r-xp 00000000 08:01 8522888                    /lib/x86_64-linux-gnu/libc-2.19.so
+7ffaf9339000-7ffaf9539000 ---p 001ba000 08:01 8522888                    /lib/x86_64-linux-gnu/libc-2.19.so
+7ffaf9539000-7ffaf953d000 r--p 001ba000 08:01 8522888                    /lib/x86_64-linux-gnu/libc-2.19.so
+7ffaf953d000-7ffaf953f000 rw-p 001be000 08:01 8522888                    /lib/x86_64-linux-gnu/libc-2.19.so
+7ffaf953f000-7ffaf9544000 rw-p 00000000 00:00 0 
+7ffaf9544000-7ffaf9547000 r-xp 00000000 08:01 8522694                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7ffaf9547000-7ffaf9746000 ---p 00003000 08:01 8522694                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7ffaf9746000-7ffaf9747000 r--p 00002000 08:01 8522694                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7ffaf9747000-7ffaf9748000 rw-p 00003000 08:01 8522694                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7ffaf9748000-7ffaf975d000 r-xp 00000000 08:01 16256360                   /usr/lib/jvm/java-8-oracle/lib/amd64/jli/libjli.so
+7ffaf975d000-7ffaf995d000 ---p 00015000 08:01 16256360                   /usr/lib/jvm/java-8-oracle/lib/amd64/jli/libjli.so
+7ffaf995d000-7ffaf995e000 rw-p 00015000 08:01 16256360                   /usr/lib/jvm/java-8-oracle/lib/amd64/jli/libjli.so
+7ffaf995e000-7ffaf9977000 r-xp 00000000 08:01 8522701                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7ffaf9977000-7ffaf9b76000 ---p 00019000 08:01 8522701                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7ffaf9b76000-7ffaf9b77000 r--p 00018000 08:01 8522701                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7ffaf9b77000-7ffaf9b78000 rw-p 00019000 08:01 8522701                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7ffaf9b78000-7ffaf9b7c000 rw-p 00000000 00:00 0 
+7ffaf9b7c000-7ffaf9b9f000 r-xp 00000000 08:01 8522702                    /lib/x86_64-linux-gnu/ld-2.19.so
+7ffaf9b9f000-7ffaf9ba0000 r--s 00000000 08:01 6562677                    /var/cache/fontconfig/e0aa53bcfa504e64f87823c16bc01eb6-le64.cache-4
+7ffaf9ba0000-7ffaf9ba4000 r--s 000f2000 08:01 8785450                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/lib/jna.jar
+7ffaf9ba4000-7ffaf9ba9000 r--s 002f9000 08:01 16256259                   /usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar
+7ffaf9ba9000-7ffaf9bb1000 r--s 00058000 08:01 8785484                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/lib/trove4j.jar
+7ffaf9bb1000-7ffaf9c76000 rw-p 00000000 00:00 0 
+7ffaf9c76000-7ffaf9c79000 ---p 00000000 00:00 0 
+7ffaf9c79000-7ffaf9d7b000 rw-p 00000000 00:00 0                          [stack:2819]
+7ffaf9d7b000-7ffaf9d7c000 r--s 00000000 00:15 14219                      /run/user/1000/dconf/user (deleted)
+7ffaf9d7c000-7ffaf9d85000 r--s 0006f000 08:01 8785495                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/lib/log4j.jar
+7ffaf9d85000-7ffaf9d88000 r--s 00024000 08:01 8785423                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/lib/jdom.jar
+7ffaf9d88000-7ffaf9d8c000 r--s 00097000 08:01 16255848                   /usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar
+7ffaf9d8c000-7ffaf9d8e000 r--s 0001e000 08:01 8785479                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/lib/extensions.jar
+7ffaf9d8e000-7ffaf9d90000 r--s 0000b000 08:01 8785358                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/lib/bootstrap.jar
+7ffaf9d90000-7ffaf9d92000 r--s 00002000 08:01 8785441                    /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/lib/boot.jar
+7ffaf9d92000-7ffaf9d9a000 rw-s 00000000 08:01 26345486                   /tmp/hsperfdata_hacker-machine/2818
+7ffaf9d9a000-7ffaf9d9b000 rw-p 00000000 00:00 0 
+7ffaf9d9b000-7ffaf9d9c000 ---p 00000000 00:00 0 
+7ffaf9d9c000-7ffaf9d9e000 rw-p 00000000 00:00 0 
+7ffaf9d9e000-7ffaf9d9f000 r--p 00022000 08:01 8522702                    /lib/x86_64-linux-gnu/ld-2.19.so
+7ffaf9d9f000-7ffaf9da0000 rw-p 00023000 08:01 8522702                    /lib/x86_64-linux-gnu/ld-2.19.so
+7ffaf9da0000-7ffaf9da1000 rw-p 00000000 00:00 0 
+7ffc12278000-7ffc1229a000 rw-p 00000000 00:00 0                          [stack]
+7ffc1231e000-7ffc12320000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Xbootclasspath/a:/home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/bin/../lib/boot.jar -Xms256m -Xmx1280m -XX:MaxPermSize=350m -XX:ReservedCodeCacheSize=225m -XX:+UseConcMarkSweepGC -XX:SoftRefLRUPolicyMSPerMB=50 -da -Djna.nosys=true -Djna.boot.library.path= -Djna.debug_load=true -Djna.debug_load.jna=true -Dsun.io.useCanonCaches=false -Djava.net.preferIPv4Stack=true -Dawt.useSystemAAFontSettings=lcd -Djb.vmOptionsFile=/home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/bin/studio64.vmoptions -XX:ErrorFile=/home/hacker-machine/java_error_in_STUDIO_%p.log -Djb.restart.code=88 -Didea.paths.selector=AndroidStudio1.5 -Didea.platform.prefix=AndroidStudio 
+java_command: com.intellij.idea.Main
+java_class_path (initial): /home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/bin/../lib/bootstrap.jar:/home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/bin/../lib/extensions.jar:/home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/bin/../lib/util.jar:/home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/bin/../lib/jdom.jar:/home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/bin/../lib/log4j.jar:/home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/bin/../lib/trove4j.jar:/home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/bin/../lib/jna.jar:/usr/lib/jvm/java-8-oracle/lib/tools.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/usr/lib/jvm/java-8-oracle/bin/javac
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+LD_LIBRARY_PATH=/home/hacker-machine/Desktop/~6thSem/ITA/Android/__android/android-studio/bin:
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xac4790], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xac4790], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x91f140], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: SIG_IGN, sa_mask[0]=00000000000010000000000000000000, sa_flags=SA_RESTART
+SIGXFSZ: [libjvm.so+0x91f140], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x91f140], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x920770], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x921b70], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x921b70], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x921b70], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x921b70], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=14.04
+DISTRIB_CODENAME=trusty
+DISTRIB_DESCRIPTION="Ubuntu 14.04.5 LTS"
+
+uname:Linux 3.13.0-96-generic #143-Ubuntu SMP Mon Aug 29 20:15:20 UTC 2016 x86_64
+libc:glibc 2.19 NPTL 2.19 
+rlimit: STACK 8192k, CORE 0k, NPROC 30459, NOFILE 4096, AS infinity
+load average:9.90 4.04 2.37
+
+/proc/meminfo:
+MemTotal:        3920356 kB
+MemFree:          894104 kB
+Buffers:           12204 kB
+Cached:           406728 kB
+SwapCached:        35660 kB
+Active:          2053476 kB
+Inactive:         790808 kB
+Active(anon):    1991292 kB
+Inactive(anon):   673512 kB
+Active(file):      62184 kB
+Inactive(file):   117296 kB
+Unevictable:          16 kB
+Mlocked:              16 kB
+SwapTotal:       4065276 kB
+SwapFree:        3836104 kB
+Dirty:               792 kB
+Writeback:             0 kB
+AnonPages:       2397464 kB
+Mapped:           191612 kB
+Shmem:            239228 kB
+Slab:             106384 kB
+SReclaimable:      68392 kB
+SUnreclaim:        37992 kB
+KernelStack:        5296 kB
+PageTables:        20456 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     6025452 kB
+Committed_AS:    5649960 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      545228 kB
+VmallocChunk:   34359182300 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   1363968 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       73468 kB
+DirectMap2M:     3993600 kB
+
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, clmul, erms, ht, tsc, tscinvbit, tscinv
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i3-3217U CPU @ 1.80GHz
+stepping	: 9
+microcode	: 0x17
+cpu MHz		: 1801.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx f16c lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 3591.46
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i3-3217U CPU @ 1.80GHz
+stepping	: 9
+microcode	: 0x17
+cpu MHz		: 900.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx f16c lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 3591.46
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i3-3217U CPU @ 1.80GHz
+stepping	: 9
+microcode	: 0x17
+cpu MHz		: 1801.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx f16c lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 3591.46
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i3-3217U CPU @ 1.80GHz
+stepping	: 9
+microcode	: 0x17
+cpu MHz		: 800.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx f16c lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 3591.46
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 3920356k(894104k free), swap 4065276k(3836104k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.101-b13) for linux-amd64 JRE (1.8.0_101-b13), built on Jun 22 2016 02:59:44 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Thu Sep 29 21:15:46 2016
+elapsed time: 5750 seconds (0d 1h 35m 50s)
+
