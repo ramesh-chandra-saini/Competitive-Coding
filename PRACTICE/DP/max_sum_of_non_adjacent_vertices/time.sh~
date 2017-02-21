@@ -1,7 +1,0 @@
-start=`date +%s.%N`
-echo 'ramesh'
-end=`date +%s.%N`
-
-runtime=$((end-start))
-echo $runtime
-
