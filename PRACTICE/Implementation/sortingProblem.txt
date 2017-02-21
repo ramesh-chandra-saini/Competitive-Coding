@@ -1,0 +1,22 @@
+Mike became bored with standard sorting technique.
+Now he come up with following way of sorting.
+
+Mike has an array A of N number. He want to sort this array based on frequency of element A[i] and if two element A[i] and A[j] has same frequency then sort based over their respective values.
+
+**Note** mike does not like duplicate number in final sorted array.  
+
+
+The first line contains a single integer,T , denoting the number of testcases. The  subsequent lines describe each testcase in the following format:
+
+1. The first line of each testcase contains one integer N .
+2. The second line of each testcase contains a integer array of N element .
+
+- 1 <= T <= 5
+- 1 <= N <= 10^6
+- -10^18 <= A[i] <= 10^18
+
+For each test case, print sorted array based on mike sorting technique. 
+
+map
+pair
+sorting
