@@ -1,6 +1,6 @@
 
 ### Introduction  
-This software runs several version of prim's algorithm
+This software runs several version of prim's algorithm.
 
 ### How to run ?
     bash run.sh 
