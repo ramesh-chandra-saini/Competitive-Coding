@@ -7,3 +7,6 @@ go src directory and execute following command:
 bash run.sh 
 
 ### Technical Detail
+    - src
+    - output
+    - input
